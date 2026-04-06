@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Connectors LLC</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:         #0B1F3A;
+    --navy-mid:     #0D2F5C;
+    --navy-light:   #1A4A8C;
+    --accent:       #4BA3D4;
+    --accent-light: #7EC8E3;
+    --text:         #0B1F3A;
+    --soft:         #4A6FA5;
+    --muted:        #8BAFC8;
+    --bg:           #FFFFFF;
+    --bg-alt:       #F5F9FF;
+    --border:       #D1E3F0;
+    --grad-hero:    linear-gradient(135deg, #0B1F3A 0%, #0D2F5C 55%, #1A4A8C 100%);
+    --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+    --radius:       12px;
+    --radius-sm:    8px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; display: flex; align-items: center; padding: 0 48px; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 1px 0 rgba(11,31,58,0.08); color: var(--navy); }
+  .nav-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 600; font-size: 16px; letter-spacing: -0.02em; transition: opacity 0.2s; }
+  .nav-logo:hover { opacity: 0.75; }
+  .btn-nav { background: var(--accent); color: white !important; padding: 9px 22px; border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: -0.01em; transition: all 0.25s var(--ease); display: inline-block; }
+  .btn-nav:hover { background: var(--accent-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(75,163,212,0.35); }
+  .page-hero { background: var(--grad-hero); padding: 100px 48px 64px; position: relative; overflow: hidden; }
+  .page-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 100% at 80% 50%, rgba(75,163,212,0.14) 0%, transparent 65%); pointer-events: none; }
+  .page-hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+  .page-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: var(--accent-light); text-transform: uppercase; margin-bottom: 16px; }
+  .page-title { font-size: clamp(36px, 5vw, 56px); font-weight: 800; color: white; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 12px; }
+  .page-date { font-size: 14px; color: rgba(255,255,255,0.50); font-weight: 400; }
+  .content-wrap { max-width: 760px; margin: 0 auto; padding: 64px 48px 100px; }
+  .intro-block { font-size: 17px; color: var(--soft); line-height: 1.75; padding: 24px 28px; background: var(--bg-alt); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 56px; }
+  section { margin-bottom: 48px; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .section-num { font-size: 11px; font-weight: 700; letter-spacing: 0.10em; color: var(--accent); text-transform: uppercase; flex-shrink: 0; }
+  .section-header h2 { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+  p { font-size: 16px; color: var(--soft); line-height: 1.75; margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; color: var(--text); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+  li { font-size: 15px; color: var(--soft); padding-left: 20px; position: relative; line-height: 1.6; }
+  li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.7; }
+  .highlight-callout { background: var(--bg-alt); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 0 0 var(--radius-sm) var(--radius-sm); padding: 20px 24px; margin-top: 16px; }
+  .highlight-callout p { font-size: 15px; margin-bottom: 12px; }
+  .sms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; margin-top: 16px; }
+  .sms-item { font-size: 14px; color: var(--soft); line-height: 1.5; }
+  .sms-item strong { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.10em; color: var(--accent); margin-bottom: 3px; }
+  .disclaimer-block { margin-top: 16px; padding: 18px 22px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; color: var(--muted); line-height: 1.65; font-style: italic; }
+  .contact-card { background: var(--grad-hero); border-radius: var(--radius); padding: 28px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+  .card-title { grid-column: 1 / -1; font-size: 16px; font-weight: 700; color: white; letter-spacing: -0.02em; margin-bottom: 4px; }
+  .contact-item { display: flex; flex-direction: column; gap: 3px; }
+  .contact-label { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); }
+  .contact-value { font-size: 14px; color: rgba(255,255,255,0.72); }
+  .contact-value a { color: var(--accent-light); text-decoration: none; }
+  .contact-value a:hover { text-decoration: underline; }
+  footer { padding: 40px 48px; border-top: 1px solid var(--border); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; color: var(--navy); font-size: 15px; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; }
+  .footer-copy { font-size: 12px; color: var(--muted); }
+  .footer-links { display: flex; align-items: center; gap: 6px; }
+  .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--text); }
+  .footer-divider { font-size: 12px; color: var(--border); }
+  @media (max-width: 768px) {
+    .site-nav { padding: 0 24px; }
+    .page-hero { padding: 88px 24px 48px; }
+    .content-wrap { padding: 48px 24px 72px; }
+    .sms-grid { grid-template-columns: 1fr; }
+    .contact-card { grid-template-columns: 1fr; padding: 20px; }
+    footer { padding: 32px 24px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg width="28" height="22" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+        <circle cx="4" cy="19" r="3" fill="currentColor"/>
+        <circle cx="14" cy="3" r="3" fill="currentColor"/>
+        <circle cx="24" cy="19" r="3" fill="currentColor"/>
+        <line x1="6.5" y1="16.8" x2="11.5" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <line x1="16.5" y1="5.8" x2="21.5" y2="16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <line x1="7" y1="19" x2="21" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      Connectors
+    </a>
+    <a href="/start" class="btn-nav">Book a Call</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-eyebrow">Legal &amp; Compliance</p>
+    <h1 class="page-title">Terms of Use</h1>
+    <p class="page-date">Effective Date: April 4, 2026</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <div class="intro-block">
+    Please read these Terms of Use ("Terms") carefully before using the website or services operated by <strong>Connectors LLC</strong> ("Company," "we," "us," or "our"). By accessing our website or engaging with our services, you agree to be bound by these Terms. If you do not agree, please do not use our services.
+  </div>
+
+  <section>
+    <div class="section-header"><span class="section-num">01</span><h2>Acceptance of Terms</h2></div>
+    <p>By using our website, submitting a contact form, calling our business number, or otherwise engaging with Connectors LLC, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="/privacy-policy">Privacy Policy</a>, which is incorporated herein by reference.</p>
+    <p>We reserve the right to modify these Terms at any time. Continued use of our services after changes are posted constitutes acceptance of the revised Terms.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">02</span><h2>Services Description</h2></div>
+    <p>Connectors LLC provides AI-powered front office systems and automation services for home service businesses. Our services may include, but are not limited to:</p>
+    <ul>
+      <li>AI voice agents for inbound and outbound call handling</li>
+      <li>Automated appointment scheduling and CRM integration</li>
+      <li>SMS and email follow-up automation</li>
+      <li>Lead capture and qualification workflows</li>
+      <li>Ongoing system management and optimization</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">03</span><h2>SMS / Text Messaging Consent</h2></div>
+    <p>By providing your mobile phone number to Connectors LLC — whether through a web form, verbal consent, or written agreement — you expressly consent to receive SMS text messages from us or on behalf of our clients, which may include:</p>
+    <ul>
+      <li>Appointment confirmations and scheduling reminders</li>
+      <li>Follow-up messages related to service inquiries</li>
+      <li>Promotional or marketing messages (only where explicitly opted in)</li>
+      <li>Automated messages sent via AI-powered communication systems</li>
+    </ul>
+    <div class="highlight-callout">
+      <p><strong>Consent is not a condition of purchase.</strong> You are not required to consent to SMS messaging to receive services from Connectors LLC.</p>
+      <p><strong>Message frequency varies</strong> based on your interactions and service activity. <strong>Message and data rates may apply.</strong></p>
+      <div class="sms-grid">
+        <div class="sms-item"><strong>To Opt Out</strong>Reply <strong>STOP</strong> to any message at any time</div>
+        <div class="sms-item"><strong>For Help</strong>Reply <strong>HELP</strong> or contact us directly</div>
+        <div class="sms-item"><strong>No Sharing</strong>We never sell or share your number for third-party marketing</div>
+        <div class="sms-item"><strong>Carriers</strong>Carriers are not liable for delayed or undelivered messages</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">04</span><h2>Prohibited Uses</h2></div>
+    <p>You agree not to use our website or services to:</p>
+    <ul>
+      <li>Violate any applicable local, state, federal, or international law or regulation</li>
+      <li>Transmit any unsolicited or unauthorized advertising or promotional material</li>
+      <li>Impersonate or misrepresent your affiliation with any person or entity</li>
+      <li>Interfere with or disrupt the integrity or performance of our systems or services</li>
+      <li>Attempt to gain unauthorized access to any portion of our systems</li>
+      <li>Harvest or collect personal information about other users without consent</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">05</span><h2>Intellectual Property</h2></div>
+    <p>All content on our website and within our service systems — including text, graphics, logos, software, AI agent configurations, and workflow designs — is the property of Connectors LLC or its licensors and is protected by applicable intellectual property laws.</p>
+    <p>You may not reproduce, distribute, modify, or create derivative works of our content without our prior written consent.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">06</span><h2>Disclaimer of Warranties</h2></div>
+    <p>Our website and services are provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+    <p>We do not warrant that our services will be uninterrupted, error-free, or free of viruses or other harmful components. AI-powered systems may occasionally produce inaccurate or incomplete outputs, and we do not guarantee specific results.</p>
+    <div class="disclaimer-block">AI voice agents and automated systems deployed through Connectors LLC are tools to assist businesses — they do not constitute professional legal, financial, or medical advice. Results vary by business, market conditions, and implementation.</div>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">07</span><h2>Limitation of Liability</h2></div>
+    <p>To the fullest extent permitted by applicable law, Connectors LLC and its members, employees, agents, and contractors shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including lost profits, lost data, loss of goodwill, or business interruption — arising out of or related to your use of our services, even if we have been advised of the possibility of such damages.</p>
+    <p>Our total cumulative liability to you for any claim arising out of or related to these Terms or our services shall not exceed the greater of <strong>$100 USD</strong> or the total fees paid by you to Connectors LLC in the <strong>three (3) months</strong> preceding the claim.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">08</span><h2>Indemnification</h2></div>
+    <p>You agree to indemnify, defend, and hold harmless Connectors LLC and its members, officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses — including reasonable attorneys' fees — arising out of or in any way related to your use of our services, your violation of these Terms, or your violation of any third-party rights.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">09</span><h2>Third-Party Services</h2></div>
+    <p>Our services integrate with and rely on third-party platforms including, but not limited to, <strong>GoHighLevel</strong> (CRM and automation), <strong>Retell AI</strong> (voice agent infrastructure), <strong>Twilio</strong> (telephony and SMS), and <strong>n8n</strong> (workflow automation). Use of these platforms is subject to their respective terms of service and privacy policies.</p>
+    <p>Connectors LLC is not responsible for the performance, availability, or data practices of any third-party services.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">10</span><h2>Governing Law &amp; Dispute Resolution</h2></div>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>State of Florida</strong>, without regard to its conflict of law provisions.</p>
+    <p>Any dispute arising out of or relating to these Terms or our services shall first be subject to good-faith negotiation. If unresolved, disputes shall be submitted to binding arbitration in <strong>Pinellas County, Florida</strong>, under the rules of the American Arbitration Association. You waive any right to a jury trial or to participate in a class action lawsuit.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">11</span><h2>Termination</h2></div>
+    <p>We reserve the right to suspend or terminate your access to our services at any time, with or without cause or notice, including for violation of these Terms. Upon termination, all licenses and rights granted to you under these Terms will immediately cease.</p>
+  </section>
+
+  <section>
+    <div class="section-header"><span class="section-num">12</span><h2>Contact Us</h2></div>
+    <p style="margin-bottom:20px;">If you have any questions about these Terms, please contact us:</p>
+    <div class="contact-card">
+      <p class="card-title">Connectors LLC</p>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:contact@getdotconnectors.com">contact@getdotconnectors.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+1 (727) 888-5548</span>
+      </div>
+      <div class="contact-item" style="grid-column:1/-1;">
+        <span class="contact-label">Address</span>
+        <span class="contact-value">4114 42nd Ave N, St Petersburg, FL 33714</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">
+      <svg width="22" height="18" viewBox="0 0 28 22" fill="none" aria-hidden="true">
+        <circle cx="4" cy="19" r="3" fill="currentColor"/>
+        <circle cx="14" cy="3" r="3" fill="currentColor"/>
+        <circle cx="24" cy="19" r="3" fill="currentColor"/>
+        <line x1="6.5" y1="16.8" x2="11.5" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <line x1="16.5" y1="5.8" x2="21.5" y2="16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <line x1="7" y1="19" x2="21" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      Connectors
+    </a>
+    <span class="footer-copy">© 2026 Connectors LLC. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <span class="footer-divider">·</span>
+      <a href="/terms-of-use">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

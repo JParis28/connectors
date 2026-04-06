@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>OG Image Capture — Connectors</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0B1F3A 0%, #0D2F5C 55%, #1A4A8C 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 88px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Background glow */
+  .glow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 65% 80% at 80% 40%, rgba(75,163,212,0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 15% 75%, rgba(126,200,227,0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Subtle dot pattern */
+  .dots {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: radial-gradient(circle, white 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 52px;
+  }
+  .logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+  }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #7EC8E3;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* Headline */
+  .headline {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.035em;
+    color: white;
+    margin-bottom: 24px;
+    max-width: 760px;
+  }
+  .headline .accent {
+    color: #7EC8E3;
+  }
+
+  /* Sub */
+  .sub {
+    font-size: 22px;
+    color: rgba(255,255,255,0.60);
+    line-height: 1.55;
+    max-width: 580px;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+  .sub strong {
+    color: rgba(255,255,255,0.88);
+    font-weight: 600;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 10px;
+  }
+  .stat {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 16px 28px;
+    backdrop-filter: blur(8px);
+  }
+  .stat-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.40);
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  /* Right side decorative element */
+  .deco {
+    position: absolute;
+    right: 88px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.12;
+  }
+</style>
+</head>
+<body>
+
+<div class="glow"></div>
+<div class="dots"></div>
+
+<!-- Decorative large logo mark -->
+<div class="deco">
+  <svg width="280" height="220" viewBox="0 0 28 22" fill="none">
+    <circle cx="4" cy="19" r="3" fill="white"/>
+    <circle cx="14" cy="3" r="3" fill="white"/>
+    <circle cx="24" cy="19" r="3" fill="white"/>
+    <line x1="6.5" y1="16.8" x2="11.5" y2="5.8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16.5" y1="5.8" x2="21.5" y2="16.8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="7" y1="19" x2="21" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<div class="content">
+  <div class="logo">
+    <svg width="32" height="25" viewBox="0 0 28 22" fill="none">
+      <circle cx="4" cy="19" r="3" fill="white"/>
+      <circle cx="14" cy="3" r="3" fill="white"/>
+      <circle cx="24" cy="19" r="3" fill="white"/>
+      <line x1="6.5" y1="16.8" x2="11.5" y2="5.8" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      <line x1="16.5" y1="5.8" x2="21.5" y2="16.8" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      <line x1="7" y1="19" x2="21" y2="19" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    </svg>
+    <span class="logo-text">Connectors</span>
+  </div>
+
+  <p class="eyebrow">AI Front Office · Tampa Bay Home Services</p>
+
+  <h1 class="headline">
+    Your AI Front Office.<br>
+    <span class="accent">Never Misses a Lead.</span>
+  </h1>
+
+  <p class="sub">
+    <strong>Answers every call, qualifies every lead, books jobs to your calendar</strong> — 24/7, no days off.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Always On</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30</div>
+      <div class="stat-label">Day Install</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Leads Left Behind</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
