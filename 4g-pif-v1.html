@@ -576,13 +576,13 @@
 
 <section class="section-header">
   <h2>Branch A: Issues Found</h2>
-  <p>14 touchpoints over 365 days. Density up front, long-tail nurture.</p>
+  <p>14 touchpoints over 365 days. Two-trigger architecture &mdash; Phase 1 fires on inspection, Phase 2 waits for the report.</p>
 </section>
 
 <div class="timeline">
 
-  <!-- Day 0 -->
-  <div class="day-marker"><span>Day 0</span></div>
+  <!-- Phase 1: Inspection Complete -->
+  <div class="day-marker"><span>Phase 1 &mdash; Inspection Complete</span></div>
 
   <!-- A1 — SMS -->
   <div class="touchpoint sms">
@@ -594,25 +594,34 @@
         </div>
         <span class="touchpoint-id">A1</span>
       </div>
-      <div class="touchpoint-title">Report Ready + Key Finding</div>
-      <div class="touchpoint-framework">AIDA &mdash; within 1 hour of inspection</div>
+      <div class="touchpoint-title">Thanks for Having Us &mdash; Report Coming Soon</div>
+      <div class="touchpoint-framework">Immediate &mdash; no report needed</div>
       <div class="touchpoint-body">
-        <p class="sms-bubble">Hi {{firstName}}, this is {{repName}} from 4thGen Roofing. Your inspection report is ready. We found {{primaryFinding}} that you'll want to see. Want me to send it over?</p>
+        <p class="sms-bubble">Hi {{firstName}}, this is {{repName}} from 4thGen Roofing. Thanks for having us out today. We're putting together your inspection report and estimate now &mdash; we'll have it over to you as soon as it's ready.</p>
       </div>
       <div class="touchpoint-meta">
         <span class="touchpoint-meta-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          &lt; 300 chars
+          ~210 chars
         </span>
         <span class="touchpoint-meta-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          1 hour post-inspection
+          Fires immediately
         </span>
       </div>
     </div>
   </div>
 
-  <div class="same-day-connector"><span>2 hours later</span></div>
+  <!-- Report Ready Gate -->
+  <div style="text-align: center; padding: 32px 0; position: relative; z-index: 1;">
+    <div style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; background: var(--bg-card); border: 2px dashed var(--border-light); border-radius: 14px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span style="font-size: 13px; font-weight: 600; color: var(--text-tertiary); letter-spacing: 0.04em; text-transform: uppercase;">Report Ready Gate &mdash; back-office marks complete</span>
+    </div>
+  </div>
+
+  <!-- Phase 2: Report Delivered -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day 0</span></div>
 
   <!-- A2 — Email -->
   <div class="touchpoint email">
@@ -624,23 +633,23 @@
         </div>
         <span class="touchpoint-id">A2</span>
       </div>
-      <div class="touchpoint-title">Findings Summary, Warm + Professional</div>
-      <div class="touchpoint-framework">Before/After/Bridge &mdash; &lt; 120 words</div>
+      <div class="touchpoint-title">Report + Estimate Delivery</div>
+      <div class="touchpoint-framework">Before/After/Bridge &mdash; &lt; 120 words &mdash; report attached</div>
       <div class="touchpoint-body">
-        <div class="subject">Subject: Your inspection results from {{inspectionDay}}</div>
+        <div class="subject">Subject: Your roof inspection report is ready</div>
         <p>{{firstName}},</p>
-        <p>Thanks for having us out {{inspectionDay}}. Here's a quick summary of what our inspector found.</p>
-        <p>Your roof has {{primaryFinding}}. In plain terms, that means {{plainLanguageConsequence}}.</p>
-        <p>It's nothing that needs to be handled overnight, but it is something worth addressing when you're ready. We put together these reports so you have everything in one place &mdash; what we found, what it means, and what the options look like.</p>
-        <p>We're putting together your estimate now and will have it over to you in the next day or two. That'll break down exactly what needs to happen and what it would cost.</p>
-        <p>Happy to answer any questions in the meantime.</p>
+        <p>Your inspection report and estimate are ready. Here's what we found and what it would cost to take care of.</p>
+        <p><strong>What we found:</strong> {{primaryFinding}}. In plain terms, that means {{plainLanguageConsequence}}.</p>
+        <p><strong>What it costs:</strong> {{estimateRange}} for the repair. That covers {{scopeSummary}}.</p>
+        <p><strong>What happens next (if you want to move forward):</strong> You reply to this email or text us back. We handle the scheduling, the insurance paperwork, and the warranty. Most repairs are done in a single day.</p>
+        <p>The full report is attached. Take your time looking it over &mdash; happy to answer any questions.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
   </div>
 
-  <!-- Day 2 -->
-  <div class="day-marker"><span>Day 2</span></div>
+  <!-- Day +2 -->
+  <div class="day-marker"><span>Day +2</span></div>
 
   <!-- A3 — AI Call -->
   <div class="touchpoint call">
@@ -695,8 +704,8 @@
     </div>
   </div>
 
-  <!-- Day 4 -->
-  <div class="day-marker"><span>Day 4</span></div>
+  <!-- Day +4 -->
+  <div class="day-marker"><span>Day +4</span></div>
 
   <!-- A4 — Email -->
   <div class="touchpoint email">
@@ -722,8 +731,8 @@
     </div>
   </div>
 
-  <!-- Day 7 -->
-  <div class="day-marker"><span>Day 7</span></div>
+  <!-- Day +7 -->
+  <div class="day-marker"><span>Day +7</span></div>
 
   <!-- A5 — AI Call -->
   <div class="touchpoint call">
@@ -761,8 +770,8 @@
     </div>
   </div>
 
-  <!-- Day 10 -->
-  <div class="day-marker"><span>Day 10</span></div>
+  <!-- Day +10 -->
+  <div class="day-marker"><span>Day +10</span></div>
 
   <!-- A6 — Email -->
   <div class="touchpoint email">
@@ -814,8 +823,8 @@
     </div>
   </div>
 
-  <!-- Day 14 -->
-  <div class="day-marker"><span>Day 14</span></div>
+  <!-- Day +14 -->
+  <div class="day-marker"><span>Day +14</span></div>
 
   <!-- A8 — Email -->
   <div class="touchpoint email">
@@ -841,8 +850,8 @@
     </div>
   </div>
 
-  <!-- Day 21 -->
-  <div class="day-marker"><span>Day 21</span></div>
+  <!-- Day +21 -->
+  <div class="day-marker"><span>Day +21</span></div>
 
   <!-- A9 — SMS -->
   <div class="touchpoint sms">
@@ -862,8 +871,8 @@
     </div>
   </div>
 
-  <!-- Day 30 -->
-  <div class="day-marker"><span>Day 30</span></div>
+  <!-- Day +30 -->
+  <div class="day-marker"><span>Day +30</span></div>
 
   <!-- A10 — AI Call -->
   <div class="touchpoint call">
@@ -901,8 +910,8 @@
     </div>
   </div>
 
-  <!-- Day 45 -->
-  <div class="day-marker"><span>Day 45</span></div>
+  <!-- Day +45 -->
+  <div class="day-marker"><span>Day +45</span></div>
 
   <!-- A11 — Email -->
   <div class="touchpoint email">
@@ -929,8 +938,8 @@
     </div>
   </div>
 
-  <!-- Day 90 -->
-  <div class="day-marker"><span>Day 90</span></div>
+  <!-- Day +90 -->
+  <div class="day-marker"><span>Day +90</span></div>
 
   <!-- A12 — Email -->
   <div class="touchpoint email">
@@ -956,8 +965,8 @@
     </div>
   </div>
 
-  <!-- Day 180 -->
-  <div class="day-marker"><span>Day 180</span></div>
+  <!-- Day +180 -->
+  <div class="day-marker"><span>Day +180</span></div>
 
   <!-- A13 — SMS -->
   <div class="touchpoint sms">
@@ -977,8 +986,8 @@
     </div>
   </div>
 
-  <!-- Day 365 -->
-  <div class="day-marker"><span>Day 365</span></div>
+  <!-- Day +365 -->
+  <div class="day-marker"><span>Day +365</span></div>
 
   <!-- A14 — Email -->
   <div class="touchpoint email">
