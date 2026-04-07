@@ -632,7 +632,7 @@
         <p>Thanks for having us out {{inspectionDay}}. Here's a quick summary of what our inspector found.</p>
         <p>Your roof has {{primaryFinding}}. In plain terms, that means {{plainLanguageConsequence}}.</p>
         <p>It's nothing that needs to be handled overnight, but it is something worth addressing when you're ready. We put together these reports so you have everything in one place &mdash; what we found, what it means, and what the options look like.</p>
-        <p>If you'd like, we can put together a free estimate that breaks it all down. Just reply to this email or the text we sent earlier and we'll get that over to you.</p>
+        <p>We're putting together your estimate now and will have it over to you in the next day or two. That'll break down exactly what needs to happen and what it would cost.</p>
         <p>Happy to answer any questions in the meantime.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
@@ -652,34 +652,34 @@
         </div>
         <span class="touchpoint-id">A3</span>
       </div>
-      <div class="touchpoint-title">Walk Through Findings, Book Estimate</div>
+      <div class="touchpoint-title">Walk Through Estimate, Book Repair</div>
       <div class="touchpoint-framework">Hormozi Value Equation &mdash; Agent: June (Retell) &mdash; Max 5 min</div>
       <div class="touchpoint-body">
         <div class="call-dialogue">
           <div class="call-label">Opening</div>
-          <div class="call-speech">"Hi, is this {{firstName}}? Hey, this is June calling from 4thGen Roofing. I'm following up on the roof inspection we did on {{inspectionDay}}. Is now an okay time to chat for a minute?"</div>
+          <div class="call-speech">"Hi, is this {{firstName}}? Hey, this is June calling from 4thGen Roofing. I'm following up on the roof inspection we did on {{inspectionDay}}. We've got your estimate ready &mdash; is now an okay time to walk you through it real quick?"</div>
 
-          <div class="call-label">Findings Walkthrough</div>
-          <div class="call-speech">"Our inspector found {{primaryFinding}} on your roof. Basically what that means is {{plainLanguageConsequence}}. The reason I'm calling is &mdash; this is the kind of thing that's better to deal with sooner than later. Right now it's a repair. If it sits through another season, it can turn into something bigger and more expensive."</div>
+          <div class="call-label">Estimate Walkthrough</div>
+          <div class="call-speech">"So our inspector found {{primaryFinding}} on your roof. Basically what that means is {{plainLanguageConsequence}}. We put together your estimate &mdash; it comes out to {{estimateRange}} for the repair. That covers {{scopeSummary}}. And depending on your insurance, a good portion of that could be covered."</div>
 
           <div class="call-label">The Ask</div>
-          <div class="call-speech">"We can put together a free estimate that breaks down exactly what needs to happen, what it would cost, and whether your insurance might cover it. Would you want us to do that?"</div>
+          <div class="call-speech">"The next step would be scheduling the repair. We can usually get it done in a day. Want me to check what we have open?"</div>
 
           <div class="call-objection">
-            <div class="call-objection-q">"How much will it cost?"</div>
-            <div class="call-objection-a">"Honest answer &mdash; I don't have an exact number yet because that depends on the scope. That's what the estimate appointment is for. No cost, no obligation."</div>
+            <div class="call-objection-q">"That's more than I expected."</div>
+            <div class="call-objection-a">"I hear you. I can walk you through exactly what's included line by line. And if your insurance covers it, your out-of-pocket could be a lot less. We handle the claim process for you too."</div>
           </div>
           <div class="call-objection">
             <div class="call-objection-q">"I need to think about it."</div>
-            <div class="call-objection-a">"Totally understand. No rush at all. I'll send you the inspection report by text so you have it handy. If you decide you want the estimate, just reply to that text."</div>
+            <div class="call-objection-a">"Totally understand. No rush at all. I'll text you a link to your estimate so you both can look it over. Whenever you're ready, just text us back."</div>
           </div>
           <div class="call-objection">
             <div class="call-objection-q">"I'm getting other quotes."</div>
-            <div class="call-objection-a">"That's smart &mdash; you should. We're happy to walk you through exactly what's in our estimate line by line so you can compare apples to apples."</div>
+            <div class="call-objection-a">"That's smart &mdash; you should. We're happy to walk you through exactly what's in ours line by line so you can compare apples to apples."</div>
           </div>
 
           <div class="call-label">Voicemail</div>
-          <div class="call-speech">"Hi {{firstName}}, this is June from 4thGen Roofing. I'm calling about your roof inspection from {{inspectionDay}}. We found a couple things you'll want to know about. Nothing urgent to panic over, but worth a quick conversation. Give us a call back or just reply to the text we sent."</div>
+          <div class="call-speech">"Hi {{firstName}}, this is June from 4thGen Roofing. I'm calling about your roof inspection from {{inspectionDay}} &mdash; your estimate is ready and I wanted to walk you through it. Give us a call back or just reply to the text we sent."</div>
         </div>
       </div>
       <div class="touchpoint-meta">
@@ -716,7 +716,7 @@
         <p>Quick update &mdash; we just finished a repair on a home in {{neighborhoodReference}} that had the same issue yours does.</p>
         <p>Homeowner caught it early, insurance covered most of it, and the whole thing was done in a day. No stress, no surprises.</p>
         <p>Your situation is similar. The difference is timing &mdash; this kind of repair gets more expensive the longer it sits, and our schedule fills up fast heading into {{season}}.</p>
-        <p>If you want that estimate, just reply and I'll get it to you within 48 hours.</p>
+        <p>If you've had a chance to look at your estimate and want to move forward, just reply and we'll get you on the schedule.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
@@ -746,10 +746,10 @@
           <div class="call-speech">"I was looking at your inspection report again, and I wanted to flag something specific. {{newDetail}} &mdash; and the reason that matters is {{whyItMatters}}. I'm not saying this to scare you. I'm saying it because a lot of homeowners don't realize {{educationalPoint}} until it's already a bigger problem."</div>
 
           <div class="call-label">Recommendation</div>
-          <div class="call-speech">"Here's what I'd recommend: let us come out and do the estimate. It's free, takes about 30 minutes, and you'll have a written breakdown of exactly what needs to happen and what it costs. Even if you decide to go with someone else, you'll have a solid number to compare against."</div>
+          <div class="call-speech">"You've already got your estimate from us &mdash; so you have the numbers. If you want to move forward, we can usually get this done in a day. Want me to check what we have open this week?"</div>
 
           <div class="call-label">If They Decline</div>
-          <div class="call-speech">"Totally fair. I appreciate you hearing me out. If anything changes or you want to revisit this down the road, you've got our number. Your inspection report doesn't expire &mdash; we'll have it on file whenever you're ready. Take care, {{firstName}}."</div>
+          <div class="call-speech">"Totally fair. I appreciate you hearing me out. If anything changes or you want to revisit this down the road, you've got our number. Your estimate and inspection report don't expire &mdash; we'll have them on file whenever you're ready. Take care, {{firstName}}."</div>
         </div>
       </div>
       <div class="touchpoint-meta">
@@ -782,7 +782,7 @@
         <p>Not sure if you saw &mdash; we just started work on a roof down the street from you on {{neighborhoodReference}}.</p>
         <p>Same kind of issue yours has. They left us a note after the estimate that said: &ldquo;I wish I hadn't waited as long as I did. The process was way easier than I expected.&rdquo;</p>
         <p>I mention it because your inspection showed the same thing. And we're already going to be in your area.</p>
-        <p>If you want that estimate, reply and I'll have it to you by end of week. If not, no worries &mdash; your report is on file whenever you're ready.</p>
+        <p>If you want to move forward, just reply and we'll get you on the schedule. If not, no worries &mdash; your estimate and report are on file whenever you're ready.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
@@ -803,7 +803,7 @@
       <div class="touchpoint-title">Final Text, No Guilt</div>
       <div class="touchpoint-framework">Pattern Interrupt &mdash; Breakup Frame</div>
       <div class="touchpoint-body">
-        <p class="sms-bubble">Last note from me on this, {{firstName}}. Your inspection report is on file &mdash; no expiration. If you ever want that estimate, just text us back here. &mdash; {{repName}}, 4thGen Roofing</p>
+        <p class="sms-bubble">Last note from me on this, {{firstName}}. Your estimate and inspection report are on file &mdash; no expiration. Whenever you're ready, just text us back here. &mdash; {{repName}}, 4thGen Roofing</p>
       </div>
       <div class="touchpoint-meta">
         <span class="touchpoint-meta-tag">
@@ -835,7 +835,7 @@
         <p>One thing most homeowners don't know about {{primaryFinding}} &mdash; it doesn't stay the same. It gets worse, and {{season}} speeds that up.</p>
         <p>Here's why: {{seasonalExplanation}}.</p>
         <p>That doesn't mean you need to panic. It means that the cost to fix it now and the cost to fix it in six months are two very different numbers.</p>
-        <p>We've still got your inspection on file. If you want the estimate, just reply &mdash; takes us about a day to put together.</p>
+        <p>You've already got your estimate from us. If you want to get ahead of it, just reply and we'll get you scheduled.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
@@ -883,13 +883,13 @@
           <div class="call-speech">"Hey {{firstName}}, this is June from 4thGen Roofing. I know it's been a few weeks since your inspection &mdash; I'm not calling to bug you, I promise. I just had a quick heads up that I thought you'd want to know about. Got a sec?"</div>
 
           <div class="call-label">Seasonal / Insurance Angle</div>
-          <div class="call-speech">"So {{seasonalInsuranceAngle}}. I mention it because with what we found on your roof, this could actually work in your favor if you get the estimate done before {{deadline}}. The estimate is free, takes about 30 minutes, and we'd walk you through exactly what's covered and what it would cost out of pocket."</div>
+          <div class="call-speech">"So {{seasonalInsuranceAngle}}. I mention it because with what we found on your roof, this could actually work in your favor if you move forward before {{deadline}}. You've already got your estimate from us &mdash; so you have the numbers. And a lot of homeowners are surprised by how much insurance picks up on this kind of repair."</div>
 
           <div class="call-label">If They Decline</div>
-          <div class="call-speech">"Completely understand. Your inspection report is on file with us permanently &mdash; it doesn't expire. Whenever you're ready, just call or text us and we'll pick right back up. Take care."</div>
+          <div class="call-speech">"Completely understand. Your estimate and inspection report are on file with us permanently &mdash; they don't expire. Whenever you're ready, just call or text us and we'll pick right back up. Take care."</div>
 
           <div class="call-label">Voicemail</div>
-          <div class="call-speech">"Hey {{firstName}}, June from 4thGen Roofing. Just a quick heads up &mdash; {{seasonalInsuranceAngle}}. With what we found on your inspection, it might be worth a conversation. No pressure &mdash; call or text us back whenever."</div>
+          <div class="call-speech">"Hey {{firstName}}, June from 4thGen Roofing. Just a quick heads up &mdash; {{seasonalInsuranceAngle}}. With what we found on your inspection, it might be worth moving forward sooner than later. No pressure &mdash; call or text us back whenever."</div>
         </div>
       </div>
       <div class="touchpoint-meta">
@@ -919,9 +919,9 @@
       <div class="touchpoint-body">
         <div class="subject">Subject: The ceiling fan that caught a leak</div>
         <p>{{firstName}},</p>
-        <p>Quick story &mdash; last month a homeowner in {{city}} called us because their ceiling fan started wobbling.</p>
-        <p>Turned out it wasn't the fan. Water had been slowly pooling above the drywall for weeks, and the weight finally shifted the mount. The fan was the canary in the coal mine.</p>
-        <p>By the time they called, the repair was three times what it would've been if they'd caught it a month earlier.</p>
+        <p>Quick story &mdash; last month a homeowner in {{city}} noticed their ceiling fan had started wobbling. They figured the mount was loose, so they got up on a ladder to tighten it.</p>
+        <p>That's when they saw the water stain. Turned out it wasn't the fan &mdash; water had been slowly pooling above the drywall for weeks, and the weight shifted the mount.</p>
+        <p>By the time they called us, the repair was three times what it would've been if they'd caught it a month earlier.</p>
         <p>Roofs have a way of telling you something's wrong &mdash; just not always in the way you'd expect.</p>
         <p>Your inspection report is still on file if you want to revisit it. Just reply and we'll send it over.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
@@ -950,7 +950,7 @@
         <p>It's been about three months since your inspection. {{season}} is here, and this is when {{seasonalConsequence}}.</p>
         <p>Your report flagged {{primaryFinding}}. That's the kind of thing that {{seasonalSpecificRisk}}.</p>
         <p>We're not trying to scare you &mdash; but we've seen what happens when this goes another season. The cost difference between fixing it now and fixing it later is real.</p>
-        <p>If you want to get ahead of it, reply and we'll have a free estimate to you within 48 hours. Your inspection is still on file &mdash; no need for another visit.</p>
+        <p>Your estimate is still on file. If you want to get ahead of it, just reply and we'll get you on the schedule.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
