@@ -109,6 +109,15 @@
     box-shadow: 0 4px 16px rgba(75,163,212,0.35);
   }
   .btn-nav:active { transform: scale(0.98); }
+  .site-nav.scrolled .btn-nav {
+    background: var(--grad-hero);
+    color: white !important;
+    box-shadow: 0 2px 12px rgba(11,31,58,0.25);
+  }
+  .site-nav.scrolled .btn-nav:hover {
+    background: linear-gradient(135deg, #0D2F5C 0%, #1A4A8C 100%);
+    box-shadow: 0 6px 24px rgba(11,31,58,0.35);
+  }
 
   /* ─── HERO ───────────────────────────────── */
   .hero {
@@ -354,11 +363,11 @@
   }
   .system-card {
     background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 32px 28px;
-    transition: all 0.3s var(--ease);
-    box-shadow: 0 2px 8px rgba(11,31,58,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: 16px;
+    padding: 36px 32px;
+    transition: all 0.35s var(--ease);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
     position: relative;
     overflow: hidden;
   }
@@ -381,11 +390,11 @@
     pointer-events: none;
   }
   .system-card:hover {
-    border-color: rgba(75,163,212,0.35);
-    box-shadow: 0 8px 32px rgba(75,163,212,0.14);
-    transform: translateY(-4px);
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
   }
-  .system-card:hover::before { opacity: 1; }
+  .system-card:hover::before { opacity: 0; }
   .system-card:hover::after { opacity: 1; }
   .sys-number {
     font-size: 10px;
@@ -477,15 +486,20 @@
     gap: 16px;
   }
   .stat-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: var(--radius);
-    padding: 32px 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 36px 28px;
     text-align: center;
-    backdrop-filter: blur(8px);
-    transition: background 0.25s var(--ease);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.35s var(--ease);
   }
-  .stat-card:hover { background: rgba(255,255,255,0.10); }
+  .stat-card:hover {
+    background: rgba(255,255,255,0.09);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
   .stat-card-num {
     font-size: clamp(42px, 4vw, 60px);
     font-weight: 800;
@@ -578,7 +592,7 @@
   }
 
   /* ─── INCLUDED ───────────────────────────── */
-  .included-section { padding: 120px 48px; border-bottom: 1px solid var(--border); }
+  .included-section { padding: 120px 48px; border-bottom: 1px solid var(--border); background: var(--bg-alt); }
   .included-inner { max-width: 1100px; margin: 0 auto; }
   .included-grid {
     display: grid;
@@ -590,16 +604,22 @@
     display: flex;
     gap: 14px;
     align-items: flex-start;
-    padding: 20px 22px;
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    transition: all 0.2s var(--ease);
+    padding: 22px 24px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: var(--radius);
+    transition: all 0.3s var(--ease);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.02);
   }
   .included-item:hover {
-    border-color: rgba(75,163,212,0.3);
-    box-shadow: 0 4px 16px rgba(75,163,212,0.08);
-    background: white;
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+  }
+  .included-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 6px);
+    justify-self: center;
   }
   .included-check { color: var(--accent); font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
   .included-text { font-size: 15px; }
@@ -812,11 +832,12 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     text-decoration: none;
+    flex: 1;
   }
   .footer-meta { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
   .footer-tagline { font-size: 13px; color: var(--muted); }
   .footer-copy { font-size: 12px; color: var(--muted); }
-  .footer-links { display: flex; align-items: center; gap: 6px; }
+  .footer-links { display: flex; align-items: center; gap: 6px; flex: 1; justify-content: flex-end; }
   .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: var(--text); }
   .footer-divider { font-size: 12px; color: var(--border); }
@@ -1243,7 +1264,7 @@
       <a href="/start" class="btn-large">Book a Free Strategy Call</a>
       <a href="#systems" class="btn-outline">See What We Build ↑</a>
     </div>
-    <div class="guarantee">No new software. No training. It just works. You stay first to respond — always.</div>
+    <div class="guarantee">Minimal software. Minimal training. It just works. You stay first to respond — always.</div>
   </div>
 </section>
 

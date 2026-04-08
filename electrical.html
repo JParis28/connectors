@@ -49,6 +49,8 @@
   .btn-nav { background: var(--accent); color: white !important; padding: 9px 22px; border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none; letter-spacing: -0.01em; transition: all 0.25s var(--ease); display: inline-block; }
   .btn-nav:hover { background: var(--accent-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(75,163,212,0.35); }
   .btn-nav:active { transform: scale(0.98); }
+  .site-nav.scrolled .btn-nav { background: var(--grad-hero); color: white !important; box-shadow: 0 2px 12px rgba(11,31,58,0.25); }
+  .site-nav.scrolled .btn-nav:hover { background: linear-gradient(135deg, #0D2F5C 0%, #1A4A8C 100%); box-shadow: 0 6px 24px rgba(11,31,58,0.35); }
   .hero { min-height: 100vh; background: var(--grad-hero); display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 96px; position: relative; overflow: hidden; }
   .hero-glow { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 75% 40%, rgba(75,163,212,0.18) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 20% 70%, rgba(126,200,227,0.10) 0%, transparent 60%); pointer-events: none; }
   .hero-content { position: relative; max-width: 1100px; margin: 0 auto; width: 100%; }
@@ -94,11 +96,11 @@
   .systems-section { padding: 120px 48px; border-bottom: 1px solid var(--border); }
   .systems-inner { max-width: 1100px; margin: 0 auto; }
   .systems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; }
-  .system-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: all 0.3s var(--ease); box-shadow: 0 2px 8px rgba(11,31,58,0.04); position: relative; overflow: hidden; }
+  .system-card { background: var(--bg); border: 1px solid rgba(0,0,0,0.04); border-radius: 16px; padding: 36px 32px; transition: all 0.35s var(--ease); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03); position: relative; overflow: hidden; }
   .system-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad-accent); opacity: 0; transition: opacity 0.3s var(--ease); }
   .system-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(75,163,212,0.05) 0%, transparent 70%); opacity: 0; transition: opacity 0.3s var(--ease); pointer-events: none; }
-  .system-card:hover { border-color: rgba(75,163,212,0.35); box-shadow: 0 8px 32px rgba(75,163,212,0.14); transform: translateY(-4px); }
-  .system-card:hover::before { opacity: 1; }
+  .system-card:hover { border-color: rgba(0,0,0,0.06); box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .system-card:hover::before { opacity: 0; }
   .system-card:hover::after { opacity: 1; }
   .sys-number { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; margin-bottom: 16px; }
   .sys-icon { font-size: 24px; display: block; margin-bottom: 12px; }
@@ -115,8 +117,8 @@
   .stats-headline { font-size: clamp(28px, 3vw, 44px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; color: white; }
   .stats-sub { font-size: clamp(15px, 1.1vw, 17px); color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.6; }
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); border-radius: var(--radius); padding: 32px 24px; text-align: center; backdrop-filter: blur(8px); transition: background 0.25s var(--ease); }
-  .stat-card:hover { background: rgba(255,255,255,0.10); }
+  .stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 36px 28px; text-align: center; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: all 0.35s var(--ease); }
+  .stat-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
   .stat-card-num { font-size: clamp(42px, 4vw, 60px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
   .stat-card-label { font-size: 15px; font-weight: 600; color: white; line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 8px; }
   .stat-card-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
@@ -130,11 +132,12 @@
   .btn-large:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(75,163,212,0.38); }
   .btn-large:active { transform: scale(0.98); }
   .mid-cta-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.32); letter-spacing: 0.01em; }
-  .included-section { padding: 120px 48px; border-bottom: 1px solid var(--border); }
+  .included-section { padding: 120px 48px; border-bottom: 1px solid var(--border); background: var(--bg-alt); }
   .included-inner { max-width: 1100px; margin: 0 auto; }
   .included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 56px; }
-  .included-item { display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: all 0.2s var(--ease); }
-  .included-item:hover { border-color: rgba(75,163,212,0.3); box-shadow: 0 4px 16px rgba(75,163,212,0.08); background: white; }
+  .included-item { display: flex; gap: 14px; align-items: flex-start; padding: 22px 24px; background: white; border: 1px solid rgba(0,0,0,0.04); border-radius: var(--radius); transition: all 0.3s var(--ease); box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.02); }
+  .included-item:hover { border-color: rgba(0,0,0,0.06); box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-1px); }
+  .included-item:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - 6px); justify-self: center; }
   .included-check { color: var(--accent); font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
   .included-text { font-size: 15px; }
   .included-text strong { display: block; font-weight: 600; color: var(--text); margin-bottom: 3px; }
@@ -174,11 +177,11 @@
   .guarantee { margin-top: 28px; font-size: 14px; color: rgba(255,255,255,0.40); letter-spacing: 0.01em; }
   footer { padding: 40px 48px; border-top: 1px solid var(--border); }
   .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-  .footer-logo { display: flex; align-items: center; gap: 10px; color: var(--navy); font-size: 15px; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; color: var(--navy); font-size: 15px; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; flex: 1; }
   .footer-meta { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
   .footer-tagline { font-size: 13px; color: var(--muted); }
   .footer-copy { font-size: 12px; color: var(--muted); }
-  .footer-links { display: flex; align-items: center; gap: 6px; }
+  .footer-links { display: flex; align-items: center; gap: 6px; flex: 1; justify-content: flex-end; }
   .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: var(--text); }
   .footer-divider { font-size: 12px; color: var(--border); }
@@ -578,7 +581,7 @@
       <a href="/start" class="btn-large">Book a Free Fit Call</a>
       <a href="#systems" class="btn-outline">See What We Build ↑</a>
     </div>
-    <div class="guarantee">No new software. No training. It just works. You stay first to respond — always.</div>
+    <div class="guarantee">Minimal software. Minimal training. It just works. You stay first to respond — always.</div>
   </div>
 </section>
 
