@@ -576,7 +576,7 @@
 
 <section class="section-header">
   <h2>Branch A: Issues Found</h2>
-  <p>14 touchpoints over 365 days. Two-trigger architecture &mdash; Phase 1 fires on inspection, Phase 2 waits for the report.</p>
+  <p>23 touchpoints over 365 days. Daily for 7 days, then tapering. Stories, reviews, humor &mdash; not just follow-ups.</p>
 </section>
 
 <div class="timeline">
@@ -634,7 +634,7 @@
         <span class="touchpoint-id">A2</span>
       </div>
       <div class="touchpoint-title">Report + Estimate Delivery</div>
-      <div class="touchpoint-framework">Before/After/Bridge &mdash; &lt; 120 words &mdash; report attached</div>
+      <div class="touchpoint-framework">Report attached &mdash; plain language breakdown</div>
       <div class="touchpoint-body">
         <div class="subject">Subject: Your roof inspection report is ready</div>
         <p>{{firstName}},</p>
@@ -648,64 +648,34 @@
     </div>
   </div>
 
-  <!-- Day +2 -->
-  <div class="day-marker"><span>Day +2</span></div>
+  <div class="same-day-connector"><span>2 hours later</span></div>
 
-  <!-- A3 — AI Call -->
-  <div class="touchpoint call">
+  <!-- A3 — SMS -->
+  <div class="touchpoint sms">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
         <div class="touchpoint-channel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          AI Call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS
         </div>
         <span class="touchpoint-id">A3</span>
       </div>
-      <div class="touchpoint-title">Walk Through Estimate, Book Repair</div>
-      <div class="touchpoint-framework">Hormozi Value Equation &mdash; Agent: June (Retell) &mdash; Max 5 min</div>
+      <div class="touchpoint-title">&ldquo;Report&rsquo;s in Your Inbox&rdquo;</div>
+      <div class="touchpoint-framework">Day 0 &mdash; 2 hours after A2</div>
       <div class="touchpoint-body">
-        <div class="call-dialogue">
-          <div class="call-label">Opening</div>
-          <div class="call-speech">"Hi, is this {{firstName}}? Hey, this is June calling from 4thGen Roofing. I'm following up on the roof inspection we did on {{inspectionDay}}. We've got your estimate ready &mdash; is now an okay time to walk you through it real quick?"</div>
-
-          <div class="call-label">Estimate Walkthrough</div>
-          <div class="call-speech">"So our inspector found {{primaryFinding}} on your roof. Basically what that means is {{plainLanguageConsequence}}. We put together your estimate &mdash; it comes out to {{estimateRange}} for the repair. That covers {{scopeSummary}}. And depending on your insurance, a good portion of that could be covered."</div>
-
-          <div class="call-label">The Ask</div>
-          <div class="call-speech">"The next step would be scheduling the repair. We can usually get it done in a day. Want me to check what we have open?"</div>
-
-          <div class="call-objection">
-            <div class="call-objection-q">"That's more than I expected."</div>
-            <div class="call-objection-a">"I hear you. I can walk you through exactly what's included line by line. And if your insurance covers it, your out-of-pocket could be a lot less. We handle the claim process for you too."</div>
-          </div>
-          <div class="call-objection">
-            <div class="call-objection-q">"I need to think about it."</div>
-            <div class="call-objection-a">"Totally understand. No rush at all. I'll text you a link to your estimate so you both can look it over. Whenever you're ready, just text us back."</div>
-          </div>
-          <div class="call-objection">
-            <div class="call-objection-q">"I'm getting other quotes."</div>
-            <div class="call-objection-a">"That's smart &mdash; you should. We're happy to walk you through exactly what's in ours line by line so you can compare apples to apples."</div>
-          </div>
-
-          <div class="call-label">Voicemail</div>
-          <div class="call-speech">"Hi {{firstName}}, this is June from 4thGen Roofing. I'm calling about your roof inspection from {{inspectionDay}} &mdash; your estimate is ready and I wanted to walk you through it. Give us a call back or just reply to the text we sent."</div>
-        </div>
+        <p class="sms-bubble">Hey {{firstName}}, just sent your inspection report and estimate to your email. Take a look when you get a chance &mdash; happy to answer any questions. &mdash; {{repName}}</p>
       </div>
       <div class="touchpoint-meta">
         <span class="touchpoint-meta-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Triggers if no reply to A1/A2
-        </span>
-        <span class="touchpoint-meta-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Tools: check_availability, book_appointment, send_sms
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~185 chars
         </span>
       </div>
     </div>
   </div>
 
-  <!-- Day +4 -->
-  <div class="day-marker"><span>Day +4</span></div>
+  <!-- Day +1 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +1</span></div>
 
   <!-- A4 — Email -->
   <div class="touchpoint email">
@@ -717,22 +687,21 @@
         </div>
         <span class="touchpoint-id">A4</span>
       </div>
-      <div class="touchpoint-title">Neighbor Social Proof + Urgency</div>
-      <div class="touchpoint-framework">Hormozi Value Equation + Social Proof Stacking &mdash; &lt; 120 words</div>
+      <div class="touchpoint-title">Case Study &mdash; Similar Home, Great Outcome</div>
+      <div class="touchpoint-framework">Soap Opera / Attractive Character &mdash; personal story, not marketing</div>
       <div class="touchpoint-body">
-        <div class="subject">Subject: Same issue on {{neighborhoodReference}}</div>
+        <div class="subject">Subject: This reminded me of your roof</div>
         <p>{{firstName}},</p>
-        <p>Quick update &mdash; we just finished a repair on a home in {{neighborhoodReference}} that had the same issue yours does.</p>
-        <p>Homeowner caught it early, insurance covered most of it, and the whole thing was done in a day. No stress, no surprises.</p>
-        <p>Your situation is similar. The difference is timing &mdash; this kind of repair gets more expensive the longer it sits, and our schedule fills up fast heading into {{season}}.</p>
-        <p>If you've had a chance to look at your estimate and want to move forward, just reply and we'll get you on the schedule.</p>
+        <p>Had a job wrap up yesterday that reminded me of your situation &mdash; homeowner over on {{neighborhoodReference}} had the same {{primaryFinding}} yours does.</p>
+        <p>They'd been putting it off for a few months. When they finally pulled the trigger, insurance covered most of it and we had it done in a day. They texted us after and said &ldquo;I wish I'd done this sooner.&rdquo;</p>
+        <p>Just thought you'd want to hear that. Your estimate is in your inbox whenever you're ready.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
   </div>
 
-  <!-- Day +7 -->
-  <div class="day-marker"><span>Day +7</span></div>
+  <!-- Day +2 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +2</span></div>
 
   <!-- A5 — AI Call -->
   <div class="touchpoint call">
@@ -744,62 +713,66 @@
         </div>
         <span class="touchpoint-id">A5</span>
       </div>
-      <div class="touchpoint-title">New Info Angle, Last Real Push</div>
-      <div class="touchpoint-framework">Education-First (Ovens) &mdash; Agent: June (Retell) &mdash; Max 5 min</div>
+      <div class="touchpoint-title">Walk Through Estimate, Book Repair</div>
+      <div class="touchpoint-framework">Agent: Adrian (Retell) &mdash; Schedule EARLY, don't wait</div>
       <div class="touchpoint-body">
         <div class="call-dialogue">
           <div class="call-label">Opening</div>
-          <div class="call-speech">"Hey {{firstName}}, it's June from 4thGen Roofing again. I know we've reached out a couple times &mdash; I promise I'm not trying to bug you. I actually have something new to share. Got a quick minute?"</div>
+          <div class="call-speech">"Hey, is this {{firstName}}? This is Adrian from 4thGen Roofing &mdash; I had a minute and thought of you. Your estimate is sitting in your inbox and I wanted to make sure you got a chance to look at it. Got a quick sec?"</div>
 
-          <div class="call-label">New Information</div>
-          <div class="call-speech">"I was looking at your inspection report again, and I wanted to flag something specific. {{newDetail}} &mdash; and the reason that matters is {{whyItMatters}}. I'm not saying this to scare you. I'm saying it because a lot of homeowners don't realize {{educationalPoint}} until it's already a bigger problem."</div>
+          <div class="call-label">If Yes &mdash; Go for the Booking Fast</div>
+          <div class="call-speech">"So the quick version: we found {{primaryFinding}}, and the repair comes out to about {{estimateRange}}. Depending on your insurance, a good chunk of that could be covered. Let me get you on the schedule &mdash; what day works best for you this week or next?"</div>
 
-          <div class="call-label">Recommendation</div>
-          <div class="call-speech">"You've already got your estimate from us &mdash; so you have the numbers. If you want to move forward, we can usually get this done in a day. Want me to check what we have open this week?"</div>
+          <div class="call-label">Booking Confirmed</div>
+          <div class="call-speech">"You're all set for {{confirmedSlot}}. I'll text you a confirmation right now. Just a couple more quick questions and I'll have you on your way."</div>
 
-          <div class="call-label">If They Decline</div>
-          <div class="call-speech">"Totally fair. I appreciate you hearing me out. If anything changes or you want to revisit this down the road, you've got our number. Your estimate and inspection report don't expire &mdash; we'll have them on file whenever you're ready. Take care, {{firstName}}."</div>
+          <div class="call-label">If Not Ready</div>
+          <div class="call-speech">"No rush &mdash; just wanted to make sure you had everything you need. Text us anytime."</div>
+
+          <div class="call-label">Voicemail</div>
+          <div class="call-speech">"Hey {{firstName}}, it's Adrian from 4thGen Roofing. Just had a minute and wanted to see if you got a chance to look at your estimate. Give us a ring back or text us anytime."</div>
         </div>
       </div>
       <div class="touchpoint-meta">
         <span class="touchpoint-meta-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Triggers if no estimate booked
+          Triggers if no reply to A1&ndash;A4
+        </span>
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Tools: check_availability, book_appointment, send_sms, set_disposition
         </span>
       </div>
     </div>
   </div>
 
-  <!-- Day +10 -->
-  <div class="day-marker"><span>Day +10</span></div>
+  <div class="same-day-connector"><span>After call</span></div>
 
-  <!-- A6 — Email -->
-  <div class="touchpoint email">
+  <!-- A6 — SMS -->
+  <div class="touchpoint sms">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
         <div class="touchpoint-channel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS
         </div>
         <span class="touchpoint-id">A6</span>
       </div>
-      <div class="touchpoint-title">Social Proof Pattern Interrupt</div>
-      <div class="touchpoint-framework">Becker Pattern Interrupt + Social Proof &mdash; &lt; 100 words</div>
+      <div class="touchpoint-title">Post-Call or Voicemail Follow-Up</div>
+      <div class="touchpoint-framework">Day +2 &mdash; conditional on call outcome</div>
       <div class="touchpoint-body">
-        <div class="subject">Subject: Your neighbor on {{neighborhoodReference}} just booked</div>
-        <p>{{firstName}},</p>
-        <p>Not sure if you saw &mdash; we just started work on a roof down the street from you on {{neighborhoodReference}}.</p>
-        <p>Same kind of issue yours has. They left us a note after the estimate that said: &ldquo;I wish I hadn't waited as long as I did. The process was way easier than I expected.&rdquo;</p>
-        <p>I mention it because your inspection showed the same thing. And we're already going to be in your area.</p>
-        <p>If you want to move forward, just reply and we'll get you on the schedule. If not, no worries &mdash; your estimate and report are on file whenever you're ready.</p>
-        <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
+        <p style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px;">If they answered:</p>
+        <p class="sms-bubble">Great chatting with you, {{firstName}}. Your appointment is confirmed for {{confirmedSlot}}. See you then! &mdash; Adrian, 4thGen Roofing</p>
+        <p style="font-size: 12px; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; margin-top: 16px;">If voicemail / no answer:</p>
+        <p class="sms-bubble">Hey {{firstName}}, tried giving you a ring &mdash; your estimate is ready to go whenever you are. Text me back if you have any questions. &mdash; Adrian</p>
       </div>
     </div>
   </div>
 
-  <div class="same-day-connector"><span>4 hours later</span></div>
+  <!-- Day +3 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +3</span></div>
 
-  <!-- A7 — SMS -->
+  <!-- A7 — SMS (Meme) -->
   <div class="touchpoint sms">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -809,22 +782,26 @@
         </div>
         <span class="touchpoint-id">A7</span>
       </div>
-      <div class="touchpoint-title">Final Text, No Guilt</div>
-      <div class="touchpoint-framework">Pattern Interrupt &mdash; Breakup Frame</div>
+      <div class="touchpoint-title">Meme / Lighthearted Check-In</div>
+      <div class="touchpoint-framework">Pattern Interrupt &mdash; humor, not corporate</div>
       <div class="touchpoint-body">
-        <p class="sms-bubble">Last note from me on this, {{firstName}}. Your estimate and inspection report are on file &mdash; no expiration. Whenever you're ready, just text us back here. &mdash; {{repName}}, 4thGen Roofing</p>
+        <p class="sms-bubble">{{firstName}} &mdash; saw this and thought of you 😂<br><br>[image: roofing meme]<br><br>Hope your week's going well. &mdash; Adrian</p>
       </div>
       <div class="touchpoint-meta">
         <span class="touchpoint-meta-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          ~190 chars
+          ~120 chars + image
+        </span>
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Includes MMS image
         </span>
       </div>
     </div>
   </div>
 
-  <!-- Day +14 -->
-  <div class="day-marker"><span>Day +14</span></div>
+  <!-- Day +4 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +4</span></div>
 
   <!-- A8 — Email -->
   <div class="touchpoint email">
@@ -836,24 +813,51 @@
         </div>
         <span class="touchpoint-id">A8</span>
       </div>
-      <div class="touchpoint-title">Education &mdash; Seasonal Impact of Finding</div>
-      <div class="touchpoint-framework">Education-First (Ovens) &mdash; &lt; 100 words</div>
+      <div class="touchpoint-title">5-Star Review + Personal Note</div>
+      <div class="touchpoint-framework">Social proof via Attractive Character &mdash; review does the selling</div>
       <div class="touchpoint-body">
-        <div class="subject">Subject: What happens to {{primaryFinding}} over {{season}}</div>
+        <div class="subject">Subject: This made my day</div>
         <p>{{firstName}},</p>
-        <p>One thing most homeowners don't know about {{primaryFinding}} &mdash; it doesn't stay the same. It gets worse, and {{season}} speeds that up.</p>
-        <p>Here's why: {{seasonalExplanation}}.</p>
-        <p>That doesn't mean you need to panic. It means that the cost to fix it now and the cost to fix it in six months are two very different numbers.</p>
-        <p>You've already got your estimate from us. If you want to get ahead of it, just reply and we'll get you scheduled.</p>
+        <p>Got this review yesterday and it made my whole week:</p>
+        <p style="padding-left: 16px; border-left: 2px solid var(--border-light); font-style: italic; color: var(--text-secondary);">&ldquo;4thGen was the best experience I've had with a contractor. Adrian walked me through everything, insurance covered most of it, and they were done before lunch. I actually enjoyed the process.&rdquo; &mdash; {{reviewerName}}, {{reviewerCity}}</p>
+        <p>Just wanted to share it because I know choosing a contractor is stressful. We take it seriously.</p>
+        <p>Your estimate is still in your inbox whenever you're ready.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
   </div>
 
-  <!-- Day +21 -->
-  <div class="day-marker"><span>Day +21</span></div>
+  <!-- Day +5 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +5</span></div>
 
-  <!-- A9 — SMS -->
+  <!-- A9 — Email -->
+  <div class="touchpoint email">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </div>
+        <span class="touchpoint-id">A9</span>
+      </div>
+      <div class="touchpoint-title">Before/After Photos from Recent Job</div>
+      <div class="touchpoint-framework">Before/After/Bridge &mdash; visual proof, show don't tell</div>
+      <div class="touchpoint-body">
+        <div class="subject">Subject: Same issue as yours &mdash; here's the before and after</div>
+        <p>{{firstName}},</p>
+        <p>Finished a job last week that looked a lot like your situation. Same {{primaryFinding}}, similar size roof.</p>
+        <p>[Before photo]<br>[After photo]</p>
+        <p>Start to finish in one day. Homeowner didn't have to be home for most of it.</p>
+        <p>Just thought you'd like to see what the process actually looks like. Questions? Just reply.</p>
+        <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +6 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +6</span></div>
+
+  <!-- A10 — SMS -->
   <div class="touchpoint sms">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -861,20 +865,26 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           SMS
         </div>
-        <span class="touchpoint-id">A9</span>
+        <span class="touchpoint-id">A10</span>
       </div>
-      <div class="touchpoint-title">Soft Re-Engage</div>
-      <div class="touchpoint-framework">AIDA &mdash; ~195 chars</div>
+      <div class="touchpoint-title">&ldquo;Hey Just Me &mdash; Any Questions?&rdquo;</div>
+      <div class="touchpoint-framework">Friend texting &mdash; not a company following up</div>
       <div class="touchpoint-body">
-        <p class="sms-bubble">Hi {{firstName}}, quick question &mdash; did you get a chance to look over your roof inspection report? If you have any questions about it, just text us back. &mdash; {{repName}}, 4thGen</p>
+        <p class="sms-bubble">Hey {{firstName}}, just me &mdash; had any questions come up about that estimate? Happy to hop on a quick call if anything's unclear. &mdash; Adrian</p>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~160 chars
+        </span>
       </div>
     </div>
   </div>
 
-  <!-- Day +30 -->
-  <div class="day-marker"><span>Day +30</span></div>
+  <!-- Day +7 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +7</span></div>
 
-  <!-- A10 — AI Call -->
+  <!-- A11 — AI Call -->
   <div class="touchpoint call">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -882,23 +892,169 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           AI Call
         </div>
-        <span class="touchpoint-id">A10</span>
+        <span class="touchpoint-id">A11</span>
       </div>
-      <div class="touchpoint-title">Final Active Push &mdash; Seasonal / Insurance</div>
-      <div class="touchpoint-framework">Hormozi Value Equation &mdash; Agent: June (Retell) &mdash; Max 5 min</div>
+      <div class="touchpoint-title">Education &mdash; New Detail from Report</div>
+      <div class="touchpoint-framework">Agent: Adrian (Retell) &mdash; lead with new info, get them to act</div>
       <div class="touchpoint-body">
         <div class="call-dialogue">
           <div class="call-label">Opening</div>
-          <div class="call-speech">"Hey {{firstName}}, this is June from 4thGen Roofing. I know it's been a few weeks since your inspection &mdash; I'm not calling to bug you, I promise. I just had a quick heads up that I thought you'd want to know about. Got a sec?"</div>
+          <div class="call-speech">"Hey {{firstName}}, it's Adrian from 4thGen. Had a minute and something came to mind about your roof I wanted to share real quick. Got a sec?"</div>
 
-          <div class="call-label">Seasonal / Insurance Angle</div>
-          <div class="call-speech">"So {{seasonalInsuranceAngle}}. I mention it because with what we found on your roof, this could actually work in your favor if you move forward before {{deadline}}. You've already got your estimate from us &mdash; so you have the numbers. And a lot of homeowners are surprised by how much insurance picks up on this kind of repair."</div>
+          <div class="call-label">If Yes</div>
+          <div class="call-speech">"So I was looking at your report again and I wanted to flag something. {{newDetail}} &mdash; the reason that matters is {{whyItMatters}}. A lot of homeowners don't realize {{educationalPoint}} until it's already a bigger issue. You've got the estimate already &mdash; want me to get you on the schedule?"</div>
 
           <div class="call-label">If They Decline</div>
-          <div class="call-speech">"Completely understand. Your estimate and inspection report are on file with us permanently &mdash; they don't expire. Whenever you're ready, just call or text us and we'll pick right back up. Take care."</div>
+          <div class="call-speech">"Totally fair. We're here whenever you're ready."</div>
 
           <div class="call-label">Voicemail</div>
-          <div class="call-speech">"Hey {{firstName}}, June from 4thGen Roofing. Just a quick heads up &mdash; {{seasonalInsuranceAngle}}. With what we found on your inspection, it might be worth moving forward sooner than later. No pressure &mdash; call or text us back whenever."</div>
+          <div class="call-speech">"Hey {{firstName}}, Adrian from 4thGen. Had something come to mind about your roof &mdash; nothing urgent, just worth a quick chat. Give me a ring or text back anytime."</div>
+        </div>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Triggers if no repair booked
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +9 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +9</span></div>
+
+  <!-- A12 — Email -->
+  <div class="touchpoint email">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </div>
+        <span class="touchpoint-id">A12</span>
+      </div>
+      <div class="touchpoint-title">Another Success Story</div>
+      <div class="touchpoint-framework">Epiphany Bridge &mdash; shifts belief from &ldquo;it can wait&rdquo; to &ldquo;I should act&rdquo;</div>
+      <div class="touchpoint-body">
+        <div class="subject">Subject: "I almost didn't call back"</div>
+        <p>{{firstName}},</p>
+        <p>Got an interesting call last week. A homeowner told me she'd been sitting on her estimate for three months.</p>
+        <p>She said she almost didn't call back &mdash; figured it could wait. Then a storm came through and turned a $3,000 repair into an $11,000 replacement.</p>
+        <p>Her exact words: &ldquo;I wish I'd just done it when you first told me.&rdquo;</p>
+        <p>Not sharing this to pressure you &mdash; just thought it was worth hearing. Your estimate doesn't expire. We're here when you're ready.</p>
+        <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +12 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +12</span></div>
+
+  <!-- A13 — SMS -->
+  <div class="touchpoint sms">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS
+        </div>
+        <span class="touchpoint-id">A13</span>
+      </div>
+      <div class="touchpoint-title">Personal Check-In</div>
+      <div class="touchpoint-framework">Warm, low-pressure</div>
+      <div class="touchpoint-body">
+        <p class="sms-bubble">Hey {{firstName}}, hope you're having a good week. Just wanted you to know we're still here if you need us. No rush on anything. &mdash; Adrian</p>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~160 chars
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +15 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +15</span></div>
+
+  <!-- A14 — Email -->
+  <div class="touchpoint email">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </div>
+        <span class="touchpoint-id">A14</span>
+      </div>
+      <div class="touchpoint-title">Social Proof &mdash; Neighbor Booked</div>
+      <div class="touchpoint-framework">Becker Pattern Interrupt + Social Proof</div>
+      <div class="touchpoint-body">
+        <div class="subject">Subject: Your neighbor on {{neighborhoodReference}} just booked</div>
+        <p>{{firstName}},</p>
+        <p>We just started work on a roof down the street from you on {{neighborhoodReference}}. Same issue yours has.</p>
+        <p>They left us a note after the estimate that said: &ldquo;I wish I hadn't waited as long as I did. The process was way easier than I expected.&rdquo;</p>
+        <p>We're going to be in your area &mdash; if you want to move forward, just reply and we'll get you on the schedule.</p>
+        <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +20 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +20</span></div>
+
+  <!-- A15 — SMS -->
+  <div class="touchpoint sms">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS
+        </div>
+        <span class="touchpoint-id">A15</span>
+      </div>
+      <div class="touchpoint-title">Seasonal or Insurance Angle</div>
+      <div class="touchpoint-framework">Timely nudge &mdash; contextual urgency</div>
+      <div class="touchpoint-body">
+        <p class="sms-bubble">Hey {{firstName}}, quick thought &mdash; {{seasonalInsuranceAngle}}. With what we found on your roof, might be worth getting ahead of it. Just reply if you want to chat. &mdash; Adrian</p>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~230 chars
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +30 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +30</span></div>
+
+  <!-- A16 — AI Call -->
+  <div class="touchpoint call">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          AI Call
+        </div>
+        <span class="touchpoint-id">A16</span>
+      </div>
+      <div class="touchpoint-title">Final Active Push</div>
+      <div class="touchpoint-framework">Agent: Adrian (Retell) &mdash; book or gracefully close</div>
+      <div class="touchpoint-body">
+        <div class="call-dialogue">
+          <div class="call-label">Opening</div>
+          <div class="call-speech">"Hey {{firstName}}, it's Adrian from 4thGen. Had a minute and thought of you &mdash; quick heads up I wanted to share. Got a sec?"</div>
+
+          <div class="call-label">If Yes</div>
+          <div class="call-speech">"So {{seasonalInsuranceAngle}}. With what we found on your roof, this could actually work in your favor if you move forward before {{deadline}}. You've already got the estimate &mdash; want me to get you on the schedule this week?"</div>
+
+          <div class="call-label">If They Decline</div>
+          <div class="call-speech">"Completely understand. Your estimate and report are on file permanently. Whenever you're ready, just call or text. Take care, {{firstName}}."</div>
+
+          <div class="call-label">Voicemail</div>
+          <div class="call-speech">"Hey {{firstName}}, Adrian from 4thGen. Had a minute and thought of you &mdash; {{seasonalInsuranceAngle}}. Give me a ring or text back whenever. Take care."</div>
         </div>
       </div>
       <div class="touchpoint-meta">
@@ -911,9 +1067,9 @@
   </div>
 
   <!-- Day +45 -->
-  <div class="day-marker"><span>Day +45</span></div>
+  <div class="day-marker"><span>Phase 2 &mdash; Day +45</span></div>
 
-  <!-- A11 — Email -->
+  <!-- A17 — Email -->
   <div class="touchpoint email">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -921,10 +1077,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Email
         </div>
-        <span class="touchpoint-id">A11</span>
+        <span class="touchpoint-id">A17</span>
       </div>
-      <div class="touchpoint-title">Seinfeld Story Nurture</div>
-      <div class="touchpoint-framework">Seinfeld Sequence &mdash; 90/10 entertainment/sell &mdash; ~120 words</div>
+      <div class="touchpoint-title">Seinfeld Story (Ceiling Fan)</div>
+      <div class="touchpoint-framework">Seinfeld Sequence &mdash; 90/10 entertainment/sell</div>
       <div class="touchpoint-body">
         <div class="subject">Subject: The ceiling fan that caught a leak</div>
         <p>{{firstName}},</p>
@@ -932,16 +1088,16 @@
         <p>That's when they saw the water stain. Turned out it wasn't the fan &mdash; water had been slowly pooling above the drywall for weeks, and the weight shifted the mount.</p>
         <p>By the time they called us, the repair was three times what it would've been if they'd caught it a month earlier.</p>
         <p>Roofs have a way of telling you something's wrong &mdash; just not always in the way you'd expect.</p>
-        <p>Your inspection report is still on file if you want to revisit it. Just reply and we'll send it over.</p>
+        <p>Your report is still on file if you want to revisit it. Just reply.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
   </div>
 
-  <!-- Day +90 -->
-  <div class="day-marker"><span>Day +90</span></div>
+  <!-- Day +60 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +60</span></div>
 
-  <!-- A12 — Email -->
+  <!-- A18 — Email -->
   <div class="touchpoint email">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -949,26 +1105,53 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Email
         </div>
-        <span class="touchpoint-id">A12</span>
+        <span class="touchpoint-id">A18</span>
+      </div>
+      <div class="touchpoint-title">Case Study or Seasonal Tip</div>
+      <div class="touchpoint-framework">Education-First &mdash; seasonal deterioration angle</div>
+      <div class="touchpoint-body">
+        <div class="subject">Subject: What {{season}} does to {{primaryFinding}}</div>
+        <p>{{firstName}},</p>
+        <p>One thing most homeowners don't know about {{primaryFinding}} &mdash; it doesn't stay the same. {{season}} speeds up the deterioration.</p>
+        <p>Here's why: {{seasonalExplanation}}.</p>
+        <p>That doesn't mean you need to panic. But the cost to fix it now and the cost to fix it in six months are usually two very different numbers.</p>
+        <p>Your estimate is on file. Whenever you're ready.</p>
+        <p class="signoff">&mdash; {{repName}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +90 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +90</span></div>
+
+  <!-- A19 — Email -->
+  <div class="touchpoint email">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </div>
+        <span class="touchpoint-id">A19</span>
       </div>
       <div class="touchpoint-title">Seasonal Urgency</div>
-      <div class="touchpoint-framework">PAS &mdash; earned at 90 days &mdash; ~110 words</div>
+      <div class="touchpoint-framework">PAS &mdash; earned at 90 days</div>
       <div class="touchpoint-body">
-        <div class="subject">Subject: {{season}} is here &mdash; your roof update</div>
+        <div class="subject">Subject: {{season}} is here &mdash; thought of you</div>
         <p>{{firstName}},</p>
-        <p>It's been about three months since your inspection. {{season}} is here, and this is when {{seasonalConsequence}}.</p>
+        <p>{{season}} is here, and this is when {{seasonalConsequence}}.</p>
         <p>Your report flagged {{primaryFinding}}. That's the kind of thing that {{seasonalSpecificRisk}}.</p>
-        <p>We're not trying to scare you &mdash; but we've seen what happens when this goes another season. The cost difference between fixing it now and fixing it later is real.</p>
-        <p>Your estimate is still on file. If you want to get ahead of it, just reply and we'll get you on the schedule.</p>
+        <p>We've seen what happens when this goes another season. The cost difference between now and later is real.</p>
+        <p>Your estimate is on file. Just reply and we'll get you scheduled.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
     </div>
   </div>
 
-  <!-- Day +180 -->
-  <div class="day-marker"><span>Day +180</span></div>
+  <!-- Day +120 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +120</span></div>
 
-  <!-- A13 — SMS -->
+  <!-- A20 — SMS -->
   <div class="touchpoint sms">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -976,20 +1159,53 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           SMS
         </div>
-        <span class="touchpoint-id">A13</span>
+        <span class="touchpoint-id">A20</span>
       </div>
-      <div class="touchpoint-title">6-Month Check-In</div>
-      <div class="touchpoint-framework">Becker Pattern Interrupt &mdash; ~210 chars</div>
+      <div class="touchpoint-title">&ldquo;Hey, Thought of You&rdquo;</div>
+      <div class="touchpoint-framework">Warm re-engage &mdash; no pressure</div>
       <div class="touchpoint-body">
-        <p class="sms-bubble">Hi {{firstName}}, it's {{repName}} from 4thGen Roofing. Quick question &mdash; did you ever get your roof taken care of? If not, your inspection report is still on file. Just text back if you want it.</p>
+        <p class="sms-bubble">Hey {{firstName}}, thought of you today. How's the roof holding up? We're here if you need anything. &mdash; Adrian</p>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~120 chars
+        </span>
       </div>
     </div>
   </div>
 
-  <!-- Day +365 -->
-  <div class="day-marker"><span>Day +365</span></div>
+  <!-- Day +180 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +180</span></div>
 
-  <!-- A14 — Email -->
+  <!-- A21 — SMS -->
+  <div class="touchpoint sms">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          SMS
+        </div>
+        <span class="touchpoint-id">A21</span>
+      </div>
+      <div class="touchpoint-title">6-Month Check-In</div>
+      <div class="touchpoint-framework">Direct question &mdash; re-engage or close</div>
+      <div class="touchpoint-body">
+        <p class="sms-bubble">Hey {{firstName}}, it's Adrian from 4thGen. Quick question &mdash; did you ever get that roof taken care of? If not, your estimate is still on file. Just text back. &mdash; Adrian</p>
+      </div>
+      <div class="touchpoint-meta">
+        <span class="touchpoint-meta-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ~195 chars
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +270 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +270</span></div>
+
+  <!-- A22 — Email -->
   <div class="touchpoint email">
     <div class="touchpoint-card">
       <div class="touchpoint-header">
@@ -997,21 +1213,47 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Email
         </div>
-        <span class="touchpoint-id">A14</span>
+        <span class="touchpoint-id">A22</span>
+      </div>
+      <div class="touchpoint-title">Year-End Insurance Deductible Angle</div>
+      <div class="touchpoint-framework">Financial urgency &mdash; deadline-driven</div>
+      <div class="touchpoint-body">
+        <div class="subject">Subject: Your insurance deductible resets soon</div>
+        <p>{{firstName}},</p>
+        <p>Quick heads up &mdash; if your homeowner's insurance deductible resets January 1st, any roof work done before then counts toward this year's deductible.</p>
+        <p>With what we found on your inspection, there's a good chance insurance covers a significant portion. We handle the entire claim process for you.</p>
+        <p>Want to get ahead of it before the year ends? Just reply and we'll get you on the schedule.</p>
+        <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day +365 -->
+  <div class="day-marker"><span>Phase 2 &mdash; Day +365</span></div>
+
+  <!-- A23 — Email -->
+  <div class="touchpoint email">
+    <div class="touchpoint-card">
+      <div class="touchpoint-header">
+        <div class="touchpoint-channel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </div>
+        <span class="touchpoint-id">A23</span>
       </div>
       <div class="touchpoint-title">1-Year Re-Inspection Offer</div>
-      <div class="touchpoint-framework">Attractive Character + Grand Slam Offer &mdash; ~130 words</div>
+      <div class="touchpoint-framework">Attractive Character + Grand Slam Offer</div>
       <div class="touchpoint-body">
         <div class="subject">Subject: It's been a year since your inspection</div>
         <p>{{firstName}},</p>
         <p>One year ago, we inspected your roof and found {{primaryFinding}}.</p>
-        <p>A lot can change in a year &mdash; and roofs don't get better with time. If you haven't had the work done yet, we'd recommend a free re-inspection to see where things stand now.</p>
+        <p>A lot can change in a year &mdash; and roofs don't get better with time. If you haven't had the work done yet, we'd recommend a free re-inspection to see where things stand.</p>
         <p>Here's what that includes:</p>
         <p>&bull; Full roof inspection (same as last time &mdash; no cost)<br>
         &bull; Updated written report with current condition<br>
         &bull; Side-by-side comparison with last year's findings<br>
         &bull; Free estimate if repairs are needed</p>
-        <p>We'd love to get you back on the schedule. Just reply to this email and we'll find a time that works.</p>
+        <p>Just reply to this email and we'll find a time that works.</p>
         <p>Thanks for being part of the 4thGen family, {{firstName}}.</p>
         <p class="signoff">&mdash; {{repName}}, 4thGen Roofing</p>
       </div>
