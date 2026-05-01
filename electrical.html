@@ -80,7 +80,7 @@
   .problem-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   .leak-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .leak-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); transition: all 0.25s var(--ease); box-shadow: 0 2px 8px rgba(11,31,58,0.04); }
-  .leak-item:hover { border-color: rgba(75,163,212,0.4); box-shadow: 0 4px 20px rgba(75,163,212,0.12); transform: translateY(-2px); }
+  .leak-item:hover { border-color: rgba(75,163,212,0.4); box-shadow: 0 4px 20px rgba(75,163,212,0.12); }
   .leak-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
   .leak-text { font-size: 16px; color: var(--text); line-height: 1.5; }
   .leak-text strong { display: block; font-weight: 600; margin-bottom: 3px; }
@@ -137,7 +137,7 @@
   .included-inner { max-width: 1100px; margin: 0 auto; }
   .included-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 56px; }
   .included-item { display: flex; gap: 14px; align-items: flex-start; padding: 22px 24px; background: white; border: 1px solid rgba(0,0,0,0.04); border-radius: var(--radius); transition: all 0.3s var(--ease); box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.02); }
-  .included-item:hover { border-color: rgba(0,0,0,0.06); box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-1px); }
+  .included-item:hover { border-color: rgba(0,0,0,0.06); box-shadow: 0 2px 6px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06); }
   .included-item:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - 6px); justify-self: center; }
   .included-check { color: var(--accent); font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
   .included-text { font-size: 15px; }
@@ -265,11 +265,6 @@
       <a href="/start" class="btn-primary">Book a Free Fit Call</a>
       <a href="#systems" class="btn-ghost">See how it works ↓</a>
     </div>
-    <div class="hero-stats">
-      <div class="stat-block"><div class="stat-num">24/7</div><div class="stat-label">Always On</div></div>
-      <div class="stat-block"><div class="stat-num">30</div><div class="stat-label">Day Install</div></div>
-      <div class="stat-block"><div class="stat-num">0</div><div class="stat-label">Leads Left Behind</div></div>
-    </div>
   </div>
 </section>
 
@@ -335,96 +330,8 @@
   </div>
 </section>
 
-<section class="systems-section" id="systems">
-  <div class="systems-inner">
-    <div class="reveal">
-      <div class="section-eyebrow">What We Build</div>
-      <h2 class="section-headline">One AI Front Office.<br><span class="accent">Fully Wired. Always On.</span></h2>
-      <p class="section-body" style="max-width:580px;margin-top:12px;"><strong>No calls hit voicemail. No missed calls, ever.</strong> Every webform submission triggers an immediate, sub-60-second speed-to-lead callback — automatically, while you're out doing the work.</p>
-    </div>
-    <div class="systems-grid">
-      <div class="system-card reveal">
-        <div class="sys-number">Component 01</div>
-        <span class="sys-icon">📞</span>
-        <div class="sys-name">Instant Lead Response</div>
-        <p class="sys-hook">Every inbound call answered live and every web form responded to in under 60 seconds, 24/7. No voicemails. No leads waiting until morning.</p>
-        <ul class="sys-list">
-          <li>Answers every inbound call live and replies to every web form instantly</li>
-          <li>Qualifies the lead — collects name, address, job type, urgency</li>
-          <li>Books them on your calendar or routes into your pipeline</li>
-          <li>Logs every contact and conversation in your CRM</li>
-        </ul>
-      </div>
-      <div class="system-card reveal">
-        <div class="sys-number">Component 02</div>
-        <span class="sys-icon">🔔</span>
-        <div class="sys-name">Appointment Reminders</div>
-        <p class="sys-hook">Automated call, text, and email reminders — so no appointment falls through the cracks.</p>
-        <ul class="sys-list">
-          <li>Sends booking confirmation immediately after scheduling</li>
-          <li>Call + SMS + email reminder sequence leading up to the appointment</li>
-          <li>Escalating follow-up if there's no response or confirmation</li>
-          <li>Reduces no-shows without your team lifting a finger</li>
-        </ul>
-      </div>
-      <div class="system-card reveal">
-        <div class="sys-number">Component 03</div>
-        <span class="sys-icon">📋</span>
-        <div class="sys-name">Post-Assessment Follow-Up</div>
-        <p class="sys-hook">Automates the gap between assessment and signed contract — so no estimate goes cold.</p>
-        <ul class="sys-list">
-          <li>Sends estimate confirmation immediately after assessment</li>
-          <li>SMS + email reminder sequence if no response</li>
-          <li>No quote disappears without a documented follow-up attempt</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="stats-section">
-  <div class="stats-inner">
-    <div class="stats-header reveal">
-      <p class="stats-eyebrow">The Data</p>
-      <h2 class="stats-headline">Speed Wins Jobs.<br>Follow-Up Closes Them.</h2>
-      <p class="stats-sub">The research is clear. Most contractors lose because of timing, not price.</p>
-    </div>
-    <div class="stats-grid reveal">
-      <div class="stat-card">
-        <div class="stat-card-num">78%</div>
-        <div class="stat-card-label">First Responder Wins</div>
-        <div class="stat-card-desc">of buyers go with the first company to respond to their inquiry</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-num">7×</div>
-        <div class="stat-card-label">Speed-to-Lead Multiplier</div>
-        <div class="stat-card-desc">more likely to close if you respond in under 5 minutes vs. 30 minutes</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-num">80%</div>
-        <div class="stat-card-label">Need 5+ Follow-Ups</div>
-        <div class="stat-card-desc">of leads require five or more follow-ups before they say yes</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-num">44%</div>
-        <div class="stat-card-label">Give Up After One</div>
-        <div class="stat-card-desc">of contractors stop following up after a single unanswered attempt</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mid-cta">
-  <div class="mid-cta-inner reveal">
-    <p class="mid-cta-label">The first one to respond wins</p>
-    <h2 class="mid-cta-headline">Are You First?</h2>
-    <p class="mid-cta-sub">78% of customers go with the first business that responds. Right now, most electrical contractors take 2–3 hours. What would happen to your close rate if you were always first?</p>
-    <a href="/start" class="btn-large">Book a Free Fit Call</a>
-    <p class="mid-cta-note">30 minutes. Free. No pitch.</p>
-  </div>
-</section>
-
-<section class="included-section">
+<section class="included-section" id="systems">
   <div class="included-inner">
     <div class="reveal">
       <div class="section-eyebrow">What's Included</div>
@@ -472,13 +379,6 @@
         <div class="included-text">
           <strong>Clear Pipeline Dashboard</strong>
           <span>New Lead → Assessment Scheduled → Estimate Sent → Won/Lost. See where every lead stands, always.</span>
-        </div>
-      </div>
-      <div class="included-item">
-        <span class="included-check">✓</span>
-        <div class="included-text">
-          <strong>Ongoing Support</strong>
-          <span>We're here for ongoing support, maintenance, and optimization.</span>
         </div>
       </div>
     </div>
@@ -577,7 +477,7 @@
     <p class="cta-sub">Book a free 30-minute fit call. We'll walk through your lead flow and show you exactly how your AI front office will work.</p>
     <div class="cta-buttons">
       <a href="/start" class="btn-large">Book a Free Fit Call</a>
-      <a href="#systems" class="btn-outline">See What We Build ↑</a>
+      <a href="#systems" class="btn-outline">See What's Included ↑</a>
     </div>
     <div class="guarantee">Minimal software. Minimal training. It just works. You stay first to respond — always.</div>
   </div>
