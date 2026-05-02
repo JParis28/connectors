@@ -3,7 +3,7 @@
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
 
-const CAL_URL = "https://dot-connectors-llc.cal.com/nicholas/strategy-call";
+const BOOKING_URL = "/start";
 
 export function CTABookCall() {
   return (
@@ -18,12 +18,7 @@ export function CTABookCall() {
           </p>
         </Reveal>
         <Reveal delay={240}>
-          <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn--primary btn--lg"
-          >
+          <a href={BOOKING_URL} className="btn btn--primary btn--lg">
             Book a Call
             <Icon name="arrow" size={18} />
           </a>
