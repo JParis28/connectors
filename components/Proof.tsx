@@ -14,7 +14,7 @@ export function Proof() {
           <p className="proof__sub">Speed wins. Now it&apos;s automatic.</p>
         </Reveal>
         <Reveal delay={360}>
-          <span className="proof__source">Lead-response research · Harvard Business Review</span>
+          <span className="proof__source">Lead-response research · Lead Connect</span>
         </Reveal>
       </div>
     </section>
