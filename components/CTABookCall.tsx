@@ -22,14 +22,13 @@ export function CTABookCall() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="cta__send cta__send--full"
-            style={{ maxWidth: 320, margin: "0 auto" }}
+            className="btn btn--primary btn--lg"
           >
-            <Icon name="calendar" size={16} strokeWidth={2.5} />
-            <span>Book a Call</span>
+            Book a Call
+            <Icon name="arrow" size={18} />
           </a>
           <p className="cta__consent">
-            Free strategy call. No obligation. We&apos;ll text a confirmation after booking.
+            Free strategy call. No obligation. We&apos;ll send a confirmation after booking.
           </p>
         </Reveal>
       </div>

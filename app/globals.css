@@ -200,6 +200,7 @@ code, pre, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, mon
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-sans);
   color: var(--fg-1);
@@ -1085,7 +1086,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 12px;
   line-height: 1.5;
   color: rgba(255,255,255,0.45);
-  margin: 4px 4px 0;
+  margin: 20px 4px 0;
   text-align: center;
 }
 .cta__success {
