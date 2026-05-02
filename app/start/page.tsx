@@ -55,7 +55,7 @@ export default function StartPage() {
                 </div>
               </div>
               <p className="bk-host__quote">
-                &ldquo;We&rsquo;ll look at your phone log together. If it&rsquo;s not a fit, I&rsquo;ll tell you.&rdquo;
+                &ldquo;Worst case, you leave with a plan you can run yourself. Best case, we run it for you. Either way, I&rsquo;ll tell you straight.&rdquo;
               </p>
             </div>
             <div className="bk-pitch__footnote">
