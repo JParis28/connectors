@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { BrandMark } from "./BrandMark";
+import { Icon } from "./Icon";
 
-export function Nav() {
+type NavProps = {
+  back?: boolean;
+};
+
+export function Nav({ back = false }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -15,11 +20,18 @@ export function Nav() {
   return (
     <nav className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner">
-        <a href="#top" className="nav__logo">
+        <a href={back ? "/" : "#top"} className="nav__logo">
           <BrandMark />
           <span>Connectors</span>
         </a>
-        <a href="/start" className="btn btn--nav">Book a Call</a>
+        {back ? (
+          <a href="/" className="btn btn--nav btn--nav-back">
+            <Icon name="arrow-left" size={14} strokeWidth={2} />
+            Back
+          </a>
+        ) : (
+          <a href="/start" className="btn btn--nav">Book a Call</a>
+        )}
       </div>
     </nav>
   );

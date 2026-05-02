@@ -4,8 +4,12 @@ type IconName =
   | "phone"
   | "check"
   | "arrow"
+  | "arrow-left"
   | "calendar"
   | "clock"
+  | "video"
+  | "globe"
+  | "x"
   | "bolt"
   | "play"
   | "pause"
@@ -29,6 +33,12 @@ const PATHS: Record<IconName, ReactNode> = {
       <polyline points="12 5 19 12 12 19" />
     </>
   ),
+  "arrow-left": (
+    <>
+      <line x1="19" y1="12" x2="5" y2="12" />
+      <polyline points="12 19 5 12 12 5" />
+    </>
+  ),
   calendar: (
     <>
       <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -41,6 +51,25 @@ const PATHS: Record<IconName, ReactNode> = {
     <>
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
+    </>
+  ),
+  video: (
+    <>
+      <polygon points="23 7 16 12 23 17 23 7" />
+      <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" y1="12" x2="22" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </>
+  ),
+  x: (
+    <>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
     </>
   ),
   bolt: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
