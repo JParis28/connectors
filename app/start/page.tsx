@@ -41,9 +41,6 @@ export default function StartPage() {
             <h1 className="bk-pitch__headline">
               Pick a time. <span className="accent">Get your front office back.</span>
             </h1>
-            <p className="bk-pitch__sub">
-              Open your call log with the founder. See exactly what Connectors would answer and book.
-            </p>
             <div className="bk-host">
               <div className="bk-host__row">
                 <div className="bk-host__avatar">
