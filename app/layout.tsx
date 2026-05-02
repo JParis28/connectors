@@ -15,23 +15,21 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Connectors — The Phone Always Gets Answered",
+  title: "The Phone Always Gets Answered",
   description:
     "An AI front office for home-services contractors. Picks up by the second ring, books the job, texts the customer back. 24/7.",
   openGraph: {
-    title: "Connectors — The Phone Always Gets Answered",
+    title: "The Phone Always Gets Answered",
     description:
       "An AI front office for home-services contractors. Picks up by the second ring, books the job, texts the customer back. 24/7.",
     siteName: "Connectors",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Connectors" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Connectors — The Phone Always Gets Answered",
+    title: "The Phone Always Gets Answered",
     description:
       "An AI front office for home-services contractors. Picks up by the second ring, books the job, texts the customer back. 24/7.",
-    images: ["/og-image.png"],
   },
   icons: {
     icon: [
