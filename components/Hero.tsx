@@ -80,7 +80,7 @@ export function Hero() {
           </p>
           <div className="hero__ctas">
             <a href="#cta" className="btn btn--primary btn--lg">
-              Text us. We reply in 60 sec.
+              Book a Call
               <Icon name="arrow" size={18} />
             </a>
             <a href="#demo" className="btn btn--ghost">Watch the 12-second demo</a>
