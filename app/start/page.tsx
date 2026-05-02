@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Icon } from "@/components/Icon";
@@ -41,11 +42,20 @@ export default function StartPage() {
               Pick a time. <span className="accent">Get your front office back.</span>
             </h1>
             <p className="bk-pitch__sub">
-              Sit down with the founder. No pressure. Just a working session on your phone log.
+              Open your call log with the founder. See exactly what Connectors would answer and book.
             </p>
             <div className="bk-host">
               <div className="bk-host__row">
-                <div className="bk-host__avatar" aria-hidden="true">NC</div>
+                <div className="bk-host__avatar">
+                  <Image
+                    src="/nicholas.jpg"
+                    alt="Nicholas"
+                    width={52}
+                    height={52}
+                    sizes="52px"
+                    priority
+                  />
+                </div>
                 <div className="bk-host__body">
                   <p className="bk-host__name">
                     Nicholas
@@ -57,13 +67,6 @@ export default function StartPage() {
               <p className="bk-host__quote">
                 &ldquo;Worst case, you leave with a plan you can run yourself. Best case, we run it for you. Either way, I&rsquo;ll tell you straight.&rdquo;
               </p>
-            </div>
-            <div className="bk-pitch__footnote">
-              <span>45 minutes</span>
-              <span className="dot" aria-hidden="true" />
-              <span>Free</span>
-              <span className="dot" aria-hidden="true" />
-              <span>Cal Video, link sent on confirm</span>
             </div>
           </div>
 
