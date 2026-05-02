@@ -79,7 +79,7 @@ export function Hero() {
             Even when you&apos;re <em>on a roof</em>. The first roofer to call back wins almost every job. Now that&apos;s always you.
           </p>
           <div className="hero__ctas">
-            <a href="#cta" className="btn btn--primary btn--lg">
+            <a href="/start" className="btn btn--primary btn--lg">
               Book a Call
               <Icon name="arrow" size={18} />
             </a>

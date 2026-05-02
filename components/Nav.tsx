@@ -19,7 +19,7 @@ export function Nav() {
           <BrandMark />
           <span>Connectors</span>
         </a>
-        <a href="#cta" className="btn btn--nav">Book a Call</a>
+        <a href="/start" className="btn btn--nav">Book a Call</a>
       </div>
     </nav>
   );

@@ -288,6 +288,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 9px 18px;
   font-size: 14px;
   backdrop-filter: blur(8px);
+  min-height: 44px;
 }
 .nav--scrolled .btn--nav {
   background: var(--c-accent);
@@ -644,6 +645,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .proof {
   text-align: center;
   padding: 180px var(--gutter);
+  overflow-x: hidden;
 }
 .proof__big {
   font-family: var(--font-display);
@@ -1176,7 +1178,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 @media (max-width: 960px) {
   .hero__inner { grid-template-columns: 1fr; gap: 60px; }
-  .hero__visual { height: 720px; }
+  .hero__visual { height: auto; min-height: 640px; }
   .hero__chip--top {
     top: -10px; right: auto; left: 50%;
     margin-left: -100px;
@@ -1196,8 +1198,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 @media (max-width: 600px) {
   .hero__chip--top, .hero__chip--bottom { display: none; }
+  .hero__visual { min-height: 580px; }
   .demo__stage { padding: 24px; border-radius: 18px; }
+  .demo__view { min-height: auto; }
   .pipeline { width: 100%; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(34px, 9.5vw, 48px); }
+  .hero__sub { font-size: 17px; }
+  .hero__ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+  .hero__ctas .btn--lg { padding: 16px 24px; font-size: 15px; min-height: 52px; }
+  .hero__ctas .btn--ghost { padding: 14px 22px; min-height: 48px; }
+  .phone, .phone-wrap { width: 240px; }
+  .phone { height: 480px; border-radius: 38px; }
+  .hero__visual { min-height: 520px; }
+  .section { padding: 56px 20px; }
+  .hero { padding: calc(var(--nav-h) + 36px) 20px 48px; }
+  .proof { padding: 72px 20px; }
+  .cta { padding: 72px 20px; }
+  .demo__stage { padding: 20px; border-radius: 16px; }
 }
 
 /* Tweaks variant tweaks */
