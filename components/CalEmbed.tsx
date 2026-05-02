@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const NAMESPACE = "roof-inspection";
-const CAL_LINK = "nicholas/roof-inspection";
+const NAMESPACE = "strategy-call";
+const CAL_LINK = "nicholas/strategy-call";
 const ORIGIN = "https://dot-connectors-llc.cal.com";
 const EMBED_SCRIPT = "https://app.cal.com/embed/embed.js";
 
@@ -29,13 +29,12 @@ export function CalEmbed() {
     // @ts-expect-error: Cal namespace API
     window.Cal.ns[NAMESPACE]("inline", {
       elementOrSelector: wrapper,
-      config: { layout: "month_view", useSlotsViewOnSmallScreen: "true", theme: "light" },
+      config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
       calLink: CAL_LINK,
     });
     // @ts-expect-error: Cal namespace API
     window.Cal.ns[NAMESPACE]("ui", {
-      theme: "light",
-      cssVarsPerTheme: { light: { "cal-brand": "#292929" } },
+      cssVarsPerTheme: { light: { "cal-brand": "#1A4A8C" } },
       hideEventTypeDetails: false,
       layout: "month_view",
     });
