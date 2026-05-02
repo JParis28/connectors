@@ -11,7 +11,7 @@ export function Proof() {
           <p className="proof__line">of jobs go to whoever calls back first.</p>
         </Reveal>
         <Reveal delay={240}>
-          <p className="proof__sub">That&apos;s almost always not you. Now it is.</p>
+          <p className="proof__sub">Speed wins. Now it&apos;s automatic.</p>
         </Reveal>
         <Reveal delay={360}>
           <span className="proof__source">Lead-response research · Harvard Business Review</span>
