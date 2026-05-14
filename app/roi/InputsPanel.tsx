@@ -139,14 +139,14 @@ export function InputsPanel({ inputs, onInput, onTrade, onMode }: Props) {
 
       <InputGroup title="Lead funnel">
         <Field
-          label="Monthly leads"
-          help="Calls, forms, DMs combined. Annual = monthly × 12."
+          label="Inbound calls"
+          help="How many calls hit your phone in a typical month. Annual = monthly × 12."
           value={inputs.monthlyLeads}
           onChange={(v) => onInput("monthlyLeads", v)}
         />
         <Field
           label="Booking rate"
-          help="Of the leads that reach you, what % turn into booked jobs today?"
+          help="Of the calls that reach you, what % turn into booked jobs today?"
           suffix="%"
           value={Math.round(inputs.bookingRate * 1000) / 10}
           onChange={(v) => onInput("bookingRate", v / 100)}
