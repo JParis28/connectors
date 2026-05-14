@@ -2648,6 +2648,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(11, 31, 58, 0.20);
 }
+.rc-compound > * { min-width: 0; }
 .rc-compound::before,
 .rc-compound::after {
   content: ''; position: absolute; inset: 0; pointer-events: none;
@@ -2692,6 +2693,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 26px 24px;
   border-right: 1px solid rgba(255, 255, 255, 0.14);
   transition: background var(--d-base) var(--ease);
+  min-width: 0;
 }
 .rc-compound__item:last-child { border-right: none; }
 .rc-compound__item:hover { background: rgba(255, 255, 255, 0.04); }
@@ -2704,6 +2706,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-variant-numeric: tabular-nums;
   margin: 0 0 8px;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 .rc-compound__label {
   font-size: 10px; font-weight: var(--w-bold);
@@ -2939,6 +2942,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .rc-compound__item:last-child { border-bottom: none; }
   .rc-compound__quote { font-size: 19px; }
   .rc-compound__seal { margin-top: 24px; }
+  .rc-standalone-cta { padding: 40px 0 24px; }
+  .rc-standalone-cta__btn { padding: 18px 28px; font-size: 15px; }
   .rc-aside { grid-template-columns: 1fr; gap: 12px; }
   .rc-email-form {
     max-width: 100%;

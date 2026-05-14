@@ -41,11 +41,11 @@ function PageHeader({ result, embedded }: { result: CalcResult; embedded?: boole
     <section className="rc-header">
       <p className="rc-header__eyebrow">Recoverable Revenue Calculator</p>
       <HeadingTag className="rc-header__title">
-        What your front office <span className="accent">is costing you</span>, in three real numbers.
+        Three real numbers your front office <span className="accent">never gets the chance to catch</span>.
       </HeadingTag>
       <p className="rc-header__sub">
         Drop in your trade and a few honest figures. We&rsquo;ll show you, line by line, the revenue
-        currently leaking out the front of your business, and the gross profit underneath it.
+        your team can&rsquo;t catch alone, and the gross profit underneath it.
       </p>
       <div className="rc-header__meta">
         <span>

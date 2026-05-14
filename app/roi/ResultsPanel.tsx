@@ -12,27 +12,27 @@ function KpiStrip({ result }: { result: CalcResult }) {
   return (
     <div className="rc-kpis">
       <div className="rc-kpi">
-        <p className="rc-kpi__eyebrow">Year 1 Recoverable</p>
+        <p className="rc-kpi__eyebrow">Year 1 Total</p>
         <div className="rc-kpi__value tnum">
           <TickingValue value={money(result.year1)} />
         </div>
         <p className="rc-kpi__profit tnum">
           ≈ <TickingValue value={money(result.year1Profit)} /> gross profit
         </p>
-        <p className="rc-kpi__caption">Captured leakage, plan attach, reactivation.</p>
+        <p className="rc-kpi__caption">Bigger because you only wake the dead once.</p>
       </div>
       <div className="rc-kpi">
-        <p className="rc-kpi__eyebrow">Steady-State Annual</p>
+        <p className="rc-kpi__eyebrow">Ongoing Annual</p>
         <div className="rc-kpi__value tnum">
           <TickingValue value={money(result.steadyAnnual)} />
         </div>
         <p className="rc-kpi__profit tnum">
           ≈ <TickingValue value={money(result.steadyAnnualProfit)} /> gross profit
         </p>
-        <p className="rc-kpi__caption">Average of Year 2 and Year 3.</p>
+        <p className="rc-kpi__caption">What Year 2 and Year 3 look like, on average.</p>
       </div>
       <div className="rc-kpi rc-kpi--hero">
-        <p className="rc-kpi__eyebrow">3-Year Cumulative</p>
+        <p className="rc-kpi__eyebrow">3-Year Total</p>
         <div className="rc-kpi__value tnum">
           <TickingValue value={money(result.threeYearTotal)} />
         </div>
