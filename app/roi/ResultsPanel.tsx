@@ -61,9 +61,9 @@ function StandaloneCta() {
 
 function CompoundStrip({ result }: { result: CalcResult }) {
   const items = [
-    { label: "10-year cumulative", value: result.tenYearTotal },
-    { label: "20-year cumulative", value: result.twentyYearTotal },
-    { label: "30-year cumulative", value: result.thirtyYearTotal },
+    { label: "10-year total", value: result.tenYearTotal, profit: result.tenYearTotalProfit },
+    { label: "20-year total", value: result.twentyYearTotal, profit: result.twentyYearTotalProfit },
+    { label: "30-year total", value: result.thirtyYearTotal, profit: result.thirtyYearTotalProfit },
   ];
   const d = result.derived;
   const hasPlan = result.pillars.some((p) => p.id === "p3");
@@ -90,6 +90,9 @@ function CompoundStrip({ result }: { result: CalcResult }) {
           <div key={it.label} className="rc-compound__item">
             <p className="rc-compound__num tnum">
               <TickingValue value={money(it.value)} />
+            </p>
+            <p className="rc-compound__profit tnum">
+              ≈ <TickingValue value={money(it.profit)} /> gross profit
             </p>
             <p className="rc-compound__label">{it.label}</p>
           </div>

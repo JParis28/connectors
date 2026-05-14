@@ -2684,7 +2684,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .rc-compound__grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -2700,13 +2700,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .rc-compound__num {
   font-family: var(--font-display);
   font-weight: var(--w-black);
-  font-size: clamp(22px, 2vw, 34px);
-  line-height: 1.05; letter-spacing: -0.035em;
+  font-size: clamp(18px, 1.35vw, 22px);
+  line-height: 1.05; letter-spacing: -0.03em;
   color: white;
   font-variant-numeric: tabular-nums;
-  margin: 0 0 8px;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  margin: 0 0 4px;
+  white-space: nowrap;
+}
+.rc-compound__profit {
+  font-size: 11px;
+  font-weight: var(--w-regular);
+  color: rgba(255, 255, 255, 0.55);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  white-space: nowrap;
 }
 .rc-compound__label {
   font-size: 10px; font-weight: var(--w-bold);

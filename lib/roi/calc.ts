@@ -100,6 +100,9 @@ export type CalcResult = {
   threeYearTotalProfit: number;
   year2Profit: number;
   year3Profit: number;
+  tenYearTotalProfit: number;
+  twentyYearTotalProfit: number;
+  thirtyYearTotalProfit: number;
   pillars: PillarResult[];
 };
 
@@ -374,6 +377,21 @@ export function calculate(inputs: Inputs): CalcResult {
   const twentyYearTotal = projectCumulative(20);
   const thirtyYearTotal = projectCumulative(30);
 
+  const projectCumulativeProfit = (years: number, growthRate = 0.025): number => {
+    let total = year1Profit;
+    if (years >= 2) total += year2Profit;
+    if (years >= 3) total += year3Profit;
+    if (years <= 3) return total;
+    const n = years - 3;
+    const r = 1 + growthRate;
+    total += (steadyAnnualProfit * (Math.pow(r, n) - 1)) / growthRate;
+    return total;
+  };
+
+  const tenYearTotalProfit = projectCumulativeProfit(10);
+  const twentyYearTotalProfit = projectCumulativeProfit(20);
+  const thirtyYearTotalProfit = projectCumulativeProfit(30);
+
   const monthlyAnswered = Math.round(inputs.monthlyLeads * (1 - m.leakRate));
   const monthlyMissed = inputs.monthlyLeads - monthlyAnswered;
 
@@ -482,6 +500,9 @@ export function calculate(inputs: Inputs): CalcResult {
     threeYearTotalProfit,
     year2Profit,
     year3Profit,
+    tenYearTotalProfit,
+    twentyYearTotalProfit,
+    thirtyYearTotalProfit,
     pillars,
   };
 }
