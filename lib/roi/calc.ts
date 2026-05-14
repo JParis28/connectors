@@ -183,13 +183,34 @@ export const TRADES: Record<TradeId, TradeConfig> = {
 };
 
 // Mode constants. Mix of published sources and Connectors deployment data:
-//   - leakRate (% of inbound calls missed today): Invoca 2025 Home Services
-//     Call Conversion Benchmarks Report (60M-call dataset) shows 27% of
-//     home-services calls go unanswered. ServiceDirect's 2019 audit of 1,000
-//     recorded calls across 94 contractors found an actual 34% miss rate vs.
-//     owners' self-reported 3% — that gap is the conservative-to-aggressive band.
+//   - leakRate (% of inbound calls missed today): the published range across
+//     home-services-focused call-tracking studies is wide because the population
+//     each study draws from is different. Three modes are calibrated against
+//     that range.
+//
+//     Conservative — 0.20. Floor. CallRail's home-services data shows ~14%
+//     unanswered; bumped to 20% to correct for survivor bias (CallRail's
+//     dataset over-represents shops with tracking already installed, which
+//     skews more sophisticated than the median small shop). Frames as "well-
+//     run shop with decent business-hours coverage and basic after-hours
+//     voicemail." Below this is hard to defend.
+//
+//     Research — 0.35. The honest middle. Sits between Invoca's 2025 Home
+//     Services 27% baseline (60M-call dataset) and the small-shop weighted
+//     math of ~52%. Accounts for Florida-specific drag: year-round AC use
+//     drives more after-hours/weekend call volume than the national average,
+//     and most small shops have weak after-hours coverage. This is the
+//     defensible number to pitch with.
+//
+//     Aggressive — 0.55. Ceiling. Aligned with 411 Locals' 62% home-services
+//     finding and Contractor in Charge's 27-62% reported range. Represents
+//     the owner-operator running 2-3 trucks on a cell-phone-only setup in
+//     peak season. Defensible but only with the weighted math to back it up.
+//
 //     https://www.invoca.com/report/the-invoca-call-conversion-benchmarks-report-home-services-2025
-//     https://blog.servicedirect.com/home-service-call-performance-report
+//     https://www.callrail.com/
+//     https://www.411locals.com/
+//     https://contractorincharge.com/
 //   - recoveryRate (% of missed calls now answered live by AI): set to 100%.
 //     The AI agent literally picks up every inbound call — there are no more
 //     misses. Retell's published case data backs this: deployments drop call
@@ -232,7 +253,7 @@ export const TRADES: Record<TradeId, TradeConfig> = {
 export const MODES: Record<ModeId, ModeConfig> = {
   conservative: {
     label: "Conservative",
-    leakRate: 0.05,
+    leakRate: 0.20,
     recoveryRate: 1.0,
     noShowRate: 0.05,
     rebookLift: 0.10,
@@ -244,7 +265,7 @@ export const MODES: Record<ModeId, ModeConfig> = {
   },
   research: {
     label: "Research",
-    leakRate: 0.27,
+    leakRate: 0.35,
     recoveryRate: 1.0,
     noShowRate: 0.15,
     rebookLift: 0.25,
@@ -256,7 +277,7 @@ export const MODES: Record<ModeId, ModeConfig> = {
   },
   aggressive: {
     label: "Aggressive",
-    leakRate: 0.34,
+    leakRate: 0.55,
     recoveryRate: 1.0,
     noShowRate: 0.20,
     rebookLift: 0.40,
