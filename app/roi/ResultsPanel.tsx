@@ -195,32 +195,63 @@ function Methodology() {
     <div className="rc-method">
       <p className="rc-method__label">How we calculate</p>
       <div className="rc-method__body">
-        Headline numbers are <strong>recoverable revenue</strong>. Underneath each one we show
-        <strong> gross profit</strong> using industry-default margins (HVAC: 57% repair / 40%
-        replacement; Roofing: 57% / 38%; General: 55% / 38%). Margins come from Profitability
-        Partners, who reviewed 200+ home-services P&amp;Ls under PE underwriting at Apex Service
-        Partners. Missed-call rates span 20 to 55 percent across the three modes. Conservative
-        (20%) is the floor, roughly CallRail&rsquo;s 14% home-services figure bumped up for
-        survivor bias (CallRail&rsquo;s dataset over-represents shops with tracking already
-        installed). Research (35%) sits between Invoca&rsquo;s 2025 Home Services 27% baseline
-        (60M calls) and the weighted small-shop math (~52%), accounting for Florida-specific
-        after-hours volume. Aggressive (55%) aligns with 411 Locals&rsquo; 62% finding and
-        Contractor in Charge&rsquo;s 27 to 62% range, the reality for cell-phone-only
-        owner-operators. AI capture rate is 100% in every mode; the AI picks up every inbound
-        call. No-show rate comes from Allied Emergency Services&rsquo; 2026
-        Roofing Sales KPIs (sit rate 60 to 85 percent inverted) plus the PMC systematic review of
-        29 appointment-reminder studies (23.1 percent median baseline). Rebook recovery is an
-        operator estimate motivated by cross-vertical automated-rebook data from medical and
-        dental appointment systems. Plan attach rate is an operator estimate — no peer-reviewed
-        at-close attach study exists for residential home services. Industry baseline without a
-        mandatory at-close pitch is 10 to 15 percent (research mode); best-in-class operators
-        with a mandatory script reach 25 to 30 percent (aggressive). Database reachability uses
-        ZeroBounce email-decay (~23%/yr) and carrier postpaid churn (~11%/yr). Phone numbers are
-        sticky even when email decays. <strong>Conservative</strong> frames the well-run shop
-        with decent business-hours coverage and basic voicemail. <strong>Research</strong> is
-        the typical small Florida shop, the defensible middle.
-        <strong> Aggressive</strong> is the owner-operator with no real after-hours setup. Every
-        pillar expands to show the exact arithmetic. Nothing is hidden in a black box.
+        <p>
+          Headline numbers are <strong>recoverable revenue</strong>. Underneath each one we show
+          <strong> gross profit</strong> using industry-default margins (HVAC: 57% repair / 40%
+          replacement; Roofing: 57% / 38%; General: 55% / 38%). Margins come from Profitability
+          Partners, who reviewed 200+ home-services P&amp;Ls under PE underwriting at Apex Service
+          Partners.
+        </p>
+        <p>
+          Missed-call rates ladder 20% / 35% / 55% across the three modes, framed by shop maturity
+          rather than skepticism. <strong>Conservative</strong> (20%) is the well-run shop with
+          decent business-hours coverage and basic voicemail. <strong>Research</strong> (35%) is
+          the typical small Florida shop. <strong>Aggressive</strong> (55%) is the owner-operator
+          with no real after-hours setup.
+        </p>
+        <p>
+          The weighted math behind the middle tier: 57% of calls land in business hours, 43% after
+          hours (Contractor In Charge, VoiceCharm). A typical Florida shop misses about 15% in
+          business hours and 55% after hours. (0.57 × 0.15) + (0.43 × 0.55) ≈ 32%, rounded to 35%
+          to absorb peak-season surge. Sources behind the bounds: CallRail&rsquo;s 14% home-services
+          figure represents the floor (tracking-number data only, biased toward sophisticated shops).
+          Invoca&rsquo;s 27% (2024) and 39% (2025, 60M calls) bracket the middle. 411
+          Locals&rsquo; 62% caps the ceiling. AI capture is 100%: the agent picks up every inbound
+          call.
+        </p>
+        <p>
+          We model every missed call as potentially job-bearing and discount with your close rate.
+          In practice 40 to 60% of inbound is new-customer intent; the rest is rebooking, vendors,
+          and existing-customer questions, none of which compete with your close rate. The
+          booking-rate input is the lever that lets you tune this for your shop.
+        </p>
+        <p>
+          No-show rate (5% / 15% / 20%) comes from Allied Emergency Services&rsquo; 2026 Roofing
+          Sales KPIs (sit rate 60 to 85% inverted) and the PMC systematic review of 29
+          appointment-reminder studies (23.1% median baseline). Rebook recovery (10% / 25% / 40%)
+          is an operator estimate motivated by cross-vertical automated-rebook data from medical
+          and dental appointment systems.
+        </p>
+        <p>
+          Plan attach (5% / 12% / 28%) is an at-close flow metric, not the installed-base stock
+          metric people usually quote. FieldEdge benchmarks 30% industry-average <strong>adoption</strong> (the
+          share of customers who eventually carry a plan) and 25 to 50% as the tech-conversion
+          target on demand calls. Without a mandatory at-close script, documented attach lands 10
+          to 15%. With a mandatory script, best-in-class operators reach 25 to 30%.
+          ServiceTitan&rsquo;s &ldquo;20 to 30% of HVAC revenue&rdquo; benchmark refers to
+          service-agreement revenue share, a different metric, and is not the source for the
+          ladder here.
+        </p>
+        <p>
+          Database reachability uses ZeroBounce email decay (~23%/yr) and carrier postpaid churn
+          (~11%/yr). Phone numbers stick when email decays. Reactivation rate (3% / 4.5% / 7%) is
+          an operator estimate; no peer-reviewed home-services rebook-the-dead study exists.
+        </p>
+        <p>
+          Every pillar expands to show the arithmetic. Conservative is the floor that should still
+          pencil. Research is the defensible middle, the right number to show a prospect on first
+          load. Aggressive is best-in-class with strong process. Nothing is hidden in a black box.
+        </p>
       </div>
     </div>
   );

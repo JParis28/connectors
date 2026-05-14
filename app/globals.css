@@ -2879,6 +2879,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.65;
   max-width: 720px;
 }
+.rc-method__body p { margin: 0 0 14px; }
+.rc-method__body p:last-child { margin-bottom: 0; }
 
 /* Mid-width: tighten inputs column */
 @media (max-width: 1024px) {

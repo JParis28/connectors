@@ -180,7 +180,7 @@ export function InputsPanel({ inputs, onInput, onTrade, onMode }: Props) {
         <InputGroup title={trade.planNoun} defaultOpen={false}>
           <Field
             label="Already on a plan"
-            help="Roughly what share of your customer base is already enrolled in a plan today? We use this to estimate how many new jobs are still pitchable."
+            help="Roughly what share of your existing customers are enrolled in a plan today. We subtract them from your Wake the Dead pool, since they're already engaged, not dormant."
             suffix="%"
             value={Math.round(inputs.planMembersPct * 1000) / 10}
             onChange={(v) => onInput("planMembersPct", v / 100)}
