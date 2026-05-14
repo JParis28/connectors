@@ -11,6 +11,7 @@ const STEPS: Step[] = [
   { time: "+8 sec", label: "Riley answers", detail: "AI receptionist picks up live. Captures the emergency, qualifies the job." },
   { time: "+2 min", label: "Same-day dispatch booked", detail: "Riley slots a tech tomorrow morning. Confirms by text + email." },
   { time: "Day +1", label: "Diagnostic + quote sent", detail: "Tech runs the diagnostic. Repair quote goes out. Follow-up automatic." },
+  { time: "Same visit", label: "Plan attached", detail: "Riley pitches maintenance at close. Customer says yes. Recurring revenue starts." },
 ];
 
 const SCENES: ReactNode[] = [
@@ -50,13 +51,23 @@ const SCENES: ReactNode[] = [
     <div className="bubble bubble--in">Looks good. Approved.</div>
     <div className="bubble bubble--meta">Auto follow-up #2 ✓</div>
   </div>,
+  // 4: Plan attach at close
+  <div key="s4" className="scene is-active">
+    <span className="scene__pill">Same visit &middot; Plan attached</span>
+    <div className="bubble bubble--out">Quick one before we wrap. Want to add maintenance? Two visits a year, $19/mo.</div>
+    <div className="bubble bubble--in">What does it cover?</div>
+    <div className="bubble bubble--out">Spring tune-up, fall heating check. Most customers add it to skip the $12K replacement bill seven years early.</div>
+    <div className="bubble bubble--in">Yeah, sounds smart. Let&apos;s do it.</div>
+    <div className="bubble bubble--meta">Plan attached &middot; monthly recurring start</div>
+  </div>,
 ];
 
 const PIPELINE = [
   { num: "01", title: "New Lead", meta: "<60 sec response" },
   { num: "02", title: "Dispatch Scheduled", meta: "Tomorrow 8–10 AM" },
   { num: "03", title: "Tech En Route", meta: "Riley confirmed by text" },
-  { num: "04", title: "Quote Approved", meta: "Closed + logged" },
+  { num: "04", title: "Quote Approved", meta: "Repair closed + logged" },
+  { num: "05", title: "Plan Attached", meta: "$19/mo recurring" },
 ];
 
 export function HowItWorks() {
