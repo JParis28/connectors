@@ -7,7 +7,7 @@
 import { money, count, pct } from "./format";
 
 export type TradeId = "hvac" | "roofing" | "general";
-export type ModeId = "conservative" | "aggressive";
+export type ModeId = "conservative" | "research" | "aggressive";
 
 export type TradeConfig = {
   label: string;
@@ -210,9 +210,15 @@ export const TRADES: Record<TradeId, TradeConfig> = {
 //     (OmniMD industry-observed range 40-50% for multi-channel automated;
 //     conservative chosen well below to absorb home-services-specific drag).
 //     No peer-reviewed home-services-specific study exists.
-//   - attachRate (plan attach on new customers): operator estimate; consistent
-//     with ServiceTitan benchmark that service-agreement revenue is 20–30% of
-//     total HVAC revenue for healthy operators.
+//   - attachRate (% of new customers who sign up for a maintenance plan at
+//     job close): operator estimate. No peer-reviewed at-close attach study
+//     exists for residential home services. Industry baseline without a
+//     mandatory at-close pitch is 10-15% (research = 12%). Operators with a
+//     strong mandatory at-close script + financing reach 25-30% (aggressive =
+//     28%). Conservative (5%) is the floor: what if the AI's pitch barely
+//     works. (ServiceTitan's separate 20-30% benchmark refers to service-
+//     agreement REVENUE as a share of total HVAC revenue — a stock metric,
+//     not at-close attach. Don't conflate.)
 //     https://www.servicetitan.com/blog/how-to-sell-hvac-maintenance-contracts-service-agreements
 //   - reachableRate (% of past customers reachable via phone OR email):
 //     ZeroBounce email-decay data (~23%/yr) + carrier postpaid churn data
@@ -226,11 +232,23 @@ export const TRADES: Record<TradeId, TradeConfig> = {
 export const MODES: Record<ModeId, ModeConfig> = {
   conservative: {
     label: "Conservative",
+    leakRate: 0.05,
+    recoveryRate: 1.0,
+    noShowRate: 0.05,
+    rebookLift: 0.10,
+    attachRate: 0.05,
+    reactivateRate: 0.03,
+    reachableRate: 0.40,
+    yr2Growth: 1.05,
+    yr3Growth: 1.10,
+  },
+  research: {
+    label: "Research",
     leakRate: 0.27,
     recoveryRate: 1.0,
     noShowRate: 0.15,
     rebookLift: 0.25,
-    attachRate: 0.28,
+    attachRate: 0.12,
     reactivateRate: 0.045,
     reachableRate: 0.45,
     yr2Growth: 1.08,
@@ -242,7 +260,7 @@ export const MODES: Record<ModeId, ModeConfig> = {
     recoveryRate: 1.0,
     noShowRate: 0.20,
     rebookLift: 0.40,
-    attachRate: 0.42,
+    attachRate: 0.28,
     reactivateRate: 0.07,
     reachableRate: 0.58,
     yr2Growth: 1.12,
@@ -252,7 +270,7 @@ export const MODES: Record<ModeId, ModeConfig> = {
 
 export function defaultInputsFor(
   tradeId: TradeId,
-  mode: ModeId = "conservative"
+  mode: ModeId = "research"
 ): Inputs {
   const t = TRADES[tradeId];
   return {

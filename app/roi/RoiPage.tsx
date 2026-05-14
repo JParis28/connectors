@@ -28,7 +28,7 @@ function decodeSnapshot(raw: string): Inputs | null {
     const obj = JSON.parse(json) as Partial<Inputs>;
     if (!obj || typeof obj !== "object") return null;
     if (!obj.trade || !(obj.trade in TRADES)) return null;
-    if (obj.mode !== "conservative" && obj.mode !== "aggressive") return null;
+    if (obj.mode !== "conservative" && obj.mode !== "research" && obj.mode !== "aggressive") return null;
     return { ...defaultInputsFor(obj.trade as TradeId, obj.mode as ModeId), ...obj } as Inputs;
   } catch {
     return null;
@@ -62,7 +62,7 @@ function PageHeader({ result, embedded }: { result: CalcResult; embedded?: boole
 }
 
 export function RoiPage({ embedded = false }: { embedded?: boolean } = {}) {
-  const [inputs, setInputs] = useState<Inputs>(() => defaultInputsFor("hvac", "conservative"));
+  const [inputs, setInputs] = useState<Inputs>(() => defaultInputsFor("hvac", "research"));
 
   // Rehydrate from URL on mount
   useEffect(() => {

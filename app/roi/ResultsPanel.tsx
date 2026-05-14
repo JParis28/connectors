@@ -202,15 +202,19 @@ function Methodology() {
         Partners. Missed-call rates come from Invoca&rsquo;s 2025 Home Services Call Conversion
         Benchmarks Report (60M calls) and ServiceDirect&rsquo;s 2019 audit of 1,000 recorded calls.
         AI capture rate is 100%. The AI answers every inbound call (Retell&rsquo;s published case
-        data backs the floor). No-show rate (15 to 20 percent) comes from Allied Emergency
-        Services&rsquo; 2026 Roofing Sales KPIs (sit rate 60 to 85 percent inverted) plus the PMC
-        systematic review of 29 appointment-reminder studies (23.1 percent median baseline). AI
-        rebook recovery (25 to 40 percent) is an operator estimate motivated by cross-vertical
-        automated-rebook data from medical and dental appointment systems. Database reachability
-        uses ZeroBounce email-decay (~23%/yr) and carrier postpaid churn (~11%/yr). Phone numbers
-        are sticky even when email decays. Conservative mode uses the low end of each range;
-        aggressive uses the median. Every pillar expands to show the exact arithmetic. Nothing is
-        hidden in a black box.
+        data backs the floor). No-show rate comes from Allied Emergency Services&rsquo; 2026
+        Roofing Sales KPIs (sit rate 60 to 85 percent inverted) plus the PMC systematic review of
+        29 appointment-reminder studies (23.1 percent median baseline). Rebook recovery is an
+        operator estimate motivated by cross-vertical automated-rebook data from medical and
+        dental appointment systems. Plan attach rate is an operator estimate — no peer-reviewed
+        at-close attach study exists for residential home services. Industry baseline without a
+        mandatory at-close pitch is 10 to 15 percent (research mode); best-in-class operators
+        with a mandatory script reach 25 to 30 percent (aggressive). Database reachability uses
+        ZeroBounce email-decay (~23%/yr) and carrier postpaid churn (~11%/yr). Phone numbers are
+        sticky even when email decays. <strong>Conservative</strong> mode asks: what if the AI
+        barely works. <strong>Research</strong> uses the industry-baseline numbers above.
+        <strong> Aggressive</strong> is best-in-class with strong process. Every pillar expands
+        to show the exact arithmetic. Nothing is hidden in a black box.
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ function sanitizeInputs(raw: unknown): Inputs | null {
   if (!raw || typeof raw !== "object") return null;
   const r = raw as Record<string, unknown>;
   if (typeof r.trade !== "string" || !(r.trade in TRADES)) return null;
-  if (r.mode !== "conservative" && r.mode !== "aggressive") return null;
+  if (r.mode !== "conservative" && r.mode !== "research" && r.mode !== "aggressive") return null;
   const base = defaultInputsFor(r.trade as TradeId, r.mode as ModeId);
   const num = (v: unknown, fallback: number): number =>
     typeof v === "number" && Number.isFinite(v) && v >= 0 ? v : fallback;
