@@ -197,10 +197,10 @@ function Methodology() {
       <div className="rc-method__body">
         <p>
           Headline numbers are <strong>recoverable revenue</strong>. Underneath each one we show
-          <strong> gross profit</strong> using industry-default margins (HVAC: 57% repair / 40%
-          replacement; Roofing: 57% / 38%; General: 55% / 38%). Margins come from Profitability
-          Partners, who reviewed 200+ home-services P&amp;Ls under PE underwriting at Apex Service
-          Partners.
+          <strong> gross profit</strong> using industry-default margins (HVAC: 50% blended;
+          Roofing: 57% repair / 38% replacement; General: 55% / 38%). Margins come from
+          Profitability Partners, who reviewed 200+ home-services P&amp;Ls under PE underwriting
+          at Apex Service Partners.
         </p>
         <p>
           Missed-call rates ladder 20% / 35% / 55% across the three modes, framed by shop maturity
