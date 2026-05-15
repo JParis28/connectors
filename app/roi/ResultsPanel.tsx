@@ -109,6 +109,11 @@ function CompoundStrip({ result }: { result: CalcResult }) {
         </blockquote>
         <figcaption className="rc-compound__attrib">Benjamin Franklin</figcaption>
       </figure>
+      <div className="rc-compound__cta">
+        <BookCallLink className="btn btn--primary btn--lg">
+          Claim what&rsquo;s already yours
+        </BookCallLink>
+      </div>
     </section>
   );
 }
@@ -308,13 +313,6 @@ export function ResultsPanel({
       </p>
       <Reveal>
         <CompoundStrip result={result} />
-      </Reveal>
-      <Reveal>
-        <div className="rc-results-cta">
-          <BookCallLink className="btn btn--primary btn--lg">
-            Claim what&rsquo;s already yours
-          </BookCallLink>
-        </div>
       </Reveal>
       <Methodology />
       <AsideRow inputs={inputs} />

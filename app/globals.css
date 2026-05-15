@@ -3193,15 +3193,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .offer__guarantees { padding: 22px 20px; }
 }
 
-/* -------- CALCULATOR — Post-Compound CTA ("Claim what's already yours") -------- */
-.rc-results-cta {
+/* -------- CALCULATOR — Compound-card close CTA ("Claim what's already yours") -------- */
+.rc-compound__cta {
   display: flex;
   justify-content: center;
-  margin: 32px 0 12px;
+  margin: 28px 0 4px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
-.rc-results-cta .btn { min-width: 280px; }
+.rc-compound__cta .btn {
+  min-width: 320px;
+  box-shadow: 0 6px 22px rgba(75,163,212,0.35), 0 0 0 1px rgba(126,200,227,0.18);
+}
 @media (max-width: 640px) {
-  .rc-results-cta .btn { min-width: 0; width: 100%; }
+  .rc-compound__cta .btn { min-width: 0; width: 100%; }
 }
 
 /* -------- CALCULATOR — Founding Cohort cost row -------- */
