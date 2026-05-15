@@ -16,8 +16,9 @@ function CohortRow() {
       aria-label="Connectors costs $1,997 per month. Founding cohort, first 25 customers, install fee waived."
     >
       <span className="rc-cohort-row__label">Your cost to recover it</span>
-      <span className="rc-cohort-row__value">
-        Connectors costs $1,997/month. Your calculator just showed you what doing nothing costs.
+      <span className="rc-cohort-row__value">Connectors costs $1,997/month.</span>
+      <span className="rc-cohort-row__lede">
+        Your calculator just showed you what doing nothing costs.
       </span>
       <span className="rc-cohort-row__note">Founding cohort · first 25 only · install fee waived</span>
     </div>
@@ -57,7 +58,7 @@ function KpiStrip({ result }: { result: CalcResult }) {
         </p>
         <p className="rc-kpi__caption">
           Every month you wait, you&rsquo;re losing about{" "}
-          <TickingValue value={money(result.threeYearTotal / 36)} /> to voicemail.
+          <strong><TickingValue value={money(result.threeYearTotal / 36)} /></strong> to voicemail.
         </p>
       </div>
     </div>
@@ -110,8 +111,8 @@ function CompoundStrip({ result }: { result: CalcResult }) {
         <figcaption className="rc-compound__attrib">Benjamin Franklin</figcaption>
       </figure>
       <div className="rc-compound__cta">
-        <BookCallLink className="btn btn--primary btn--lg">
-          Claim what&rsquo;s already yours
+        <BookCallLink className="btn btn--primary btn--lg rc-compound__cta-btn">
+          <span>Claim what&rsquo;s already yours</span>
         </BookCallLink>
       </div>
     </section>
