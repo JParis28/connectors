@@ -68,8 +68,9 @@ export default function StartPage({
               <>
                 <h1 className="bk-pitch__headline">
                   You ran the numbers.{" "}
-                  <span className="accent">{year1Recoverable}.</span>{" "}
-                  Let&rsquo;s talk about it.
+                  <span className="accent">
+                    {year1Recoverable}. Let&rsquo;s talk about it.
+                  </span>
                 </h1>
                 <p className="bk-pitch__attribution">
                   Your numbers. Your booking rate. Your ticket size. That&rsquo;s what we&rsquo;ll talk about.
