@@ -3135,7 +3135,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .offer__commitment { padding: 20px 22px; }
 }
 .offer__guarantees {
-  max-width: 560px;
+  max-width: 580px;
   margin: 0 auto 48px;
   padding: 28px 32px;
   border: 1px solid rgba(255,255,255,0.18);
