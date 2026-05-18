@@ -1,16 +1,6 @@
 import { BookCallLink } from "./BookCallLink";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
-import { calculate, defaultInputsFor } from "@/lib/roi/calc";
-import { money } from "@/lib/roi/format";
-
-const ANNUAL_COST = 1997 * 12;
-const DEFAULT_RESULT = calculate(defaultInputsFor("hvac", "research"));
-const DEFAULT_YEAR1 = DEFAULT_RESULT.year1;
-const DEFAULT_PCT_OF_UPSIDE = Math.max(
-  1,
-  Math.round((ANNUAL_COST / DEFAULT_YEAR1) * 100),
-);
 
 export function Offer() {
   return (
@@ -25,16 +15,7 @@ export function Offer() {
             <span className="accent">Locked at the founding rate for 5 years.</span>
           </h2>
         </Reveal>
-        <Reveal delay={150}>
-          <p className="offer__roi-wrap">
-            About <strong>{DEFAULT_PCT_OF_UPSIDE}%</strong> of the{" "}
-            <strong>{money(DEFAULT_YEAR1)}</strong> a typical HVAC contractor adds in Year 1.{" "}
-            <a href="#calculator" className="offer__roi-link">
-              Run your numbers →
-            </a>
-          </p>
-        </Reveal>
-        <Reveal delay={210}>
+        <Reveal delay={180}>
           <p className="offer__strapline">
             Founding rate for the first 25 customers. Price goes up after the cohort closes.
           </p>
@@ -47,17 +28,7 @@ export function Offer() {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={300}>
-          <ul className="offer__terms">
-            <li>
-              <Icon name="check" size={16} strokeWidth={2.5} />
-              <span>
-                <strong>$1,997/month</strong> locked at the founding rate for 5 full years.
-              </span>
-            </li>
-          </ul>
-        </Reveal>
-        <Reveal delay={380}>
+        <Reveal delay={340}>
           <div className="offer__guarantees">
             <p className="offer__guarantees-eyebrow">Two refund guarantees</p>
             <ul className="offer__guarantees-list">
@@ -74,7 +45,7 @@ export function Offer() {
             </ul>
           </div>
         </Reveal>
-        <Reveal delay={500}>
+        <Reveal delay={460}>
           <BookCallLink className="btn btn--primary btn--lg">
             Book a Call
             <Icon name="arrow" size={18} />
