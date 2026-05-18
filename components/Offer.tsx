@@ -17,7 +17,7 @@ export function Offer() {
         </Reveal>
         <Reveal delay={180}>
           <p className="offer__strapline">
-            Introductory pricing for the first 25 customers. After the cohort closes, we reset to standard pricing.
+            Founding rate for the first 25 customers. Price goes up after the cohort closes.
           </p>
         </Reveal>
         <Reveal delay={240}>
@@ -34,12 +34,6 @@ export function Offer() {
               <Icon name="check" size={16} strokeWidth={2.5} />
               <span>
                 <strong>$1,997/month</strong> locked at the founding rate for 5 full years.
-              </span>
-            </li>
-            <li>
-              <Icon name="check" size={16} strokeWidth={2.5} />
-              <span>
-                Install fee <strong>($2,997 value)</strong> waived.
               </span>
             </li>
           </ul>

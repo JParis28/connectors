@@ -9,18 +9,20 @@ import { PillarCard } from "./PillarCard";
 import { TickingValue } from "./Ticking";
 import { trackEvent, newEventId } from "@/lib/analytics";
 
-function CohortRow() {
+function CohortRow({ result }: { result: CalcResult }) {
+  const annualCost = 1997 * 12;
+  const pctOfUpside = Math.max(1, Math.round((annualCost / result.year1) * 100));
   return (
     <div
       className="rc-cohort-row"
-      aria-label="Connectors costs $1,997 per month. Founding cohort, first 25 customers, install fee waived."
+      aria-label={`Connectors costs $1,997 per month — about ${pctOfUpside} percent of the ${money(result.year1)} Year 1 added revenue you just calculated. Founding cohort, first 25 customers.`}
     >
       <span className="rc-cohort-row__label">Your cost to recover it</span>
       <span className="rc-cohort-row__value">Connectors costs $1,997/month.</span>
       <span className="rc-cohort-row__lede">
-        Your calculator just showed you what doing nothing costs.
+        About {pctOfUpside}% of the {money(result.year1)} Year 1 added revenue you just calculated above.
       </span>
-      <span className="rc-cohort-row__note">Founding cohort · first 25 only · install fee waived</span>
+      <span className="rc-cohort-row__note">Founding cohort · first 25 only · price goes up after</span>
     </div>
   );
 }
@@ -294,7 +296,7 @@ export function ResultsPanel({
         <KpiStrip result={result} />
       </Reveal>
       <Reveal>
-        <CohortRow />
+        <CohortRow result={result} />
       </Reveal>
       <div className="rc-section-head">
         <h2 className="rc-section-head__title">
