@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BookCallLink } from "./BookCallLink";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
@@ -30,9 +29,9 @@ export function Offer() {
           <p className="offer__roi-wrap">
             About <strong>{DEFAULT_PCT_OF_UPSIDE}%</strong> of the{" "}
             <strong>{money(DEFAULT_YEAR1)}</strong> a typical HVAC contractor adds in Year 1.{" "}
-            <Link href="/roi" className="offer__roi-link">
+            <a href="#calculator" className="offer__roi-link">
               Run your numbers →
-            </Link>
+            </a>
           </p>
         </Reveal>
         <Reveal delay={210}>

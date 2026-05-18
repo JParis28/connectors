@@ -68,7 +68,7 @@ export function RoiPage({ embedded = false }: { embedded?: boolean } = {}) {
   const result = useMemo(() => calculate(inputs), [inputs]);
 
   return (
-    <div className="rc-page">
+    <div className="rc-page" id={embedded ? "calculator" : undefined}>
       <PageHeader result={result} embedded={embedded} />
       <main className="rc-shell">
         <InputsPanel
