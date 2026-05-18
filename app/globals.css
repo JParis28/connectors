@@ -3107,6 +3107,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0 auto 36px;
   text-wrap: balance;
 }
+.offer__roi-wrap {
+  font-size: clamp(17px, 1.45vw, 21px);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.5;
+  max-width: 620px;
+  margin: 0 auto 14px;
+  text-wrap: balance;
+}
+.offer__roi-wrap strong {
+  color: var(--c-white);
+  font-weight: var(--w-semi);
+}
+.offer__roi-link {
+  color: var(--c-accent-light);
+  text-decoration: none;
+  font-weight: var(--w-semi);
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: border-color 160ms ease;
+}
+.offer__roi-link:hover { border-bottom-color: var(--c-accent-light); }
 .offer__commitment {
   position: relative;
   max-width: 580px;

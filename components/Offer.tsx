@@ -1,6 +1,17 @@
+import Link from "next/link";
 import { BookCallLink } from "./BookCallLink";
 import { Icon } from "./Icon";
 import { Reveal } from "./Reveal";
+import { calculate, defaultInputsFor } from "@/lib/roi/calc";
+import { money } from "@/lib/roi/format";
+
+const ANNUAL_COST = 1997 * 12;
+const DEFAULT_RESULT = calculate(defaultInputsFor("hvac", "research"));
+const DEFAULT_YEAR1 = DEFAULT_RESULT.year1;
+const DEFAULT_PCT_OF_UPSIDE = Math.max(
+  1,
+  Math.round((ANNUAL_COST / DEFAULT_YEAR1) * 100),
+);
 
 export function Offer() {
   return (
@@ -15,7 +26,16 @@ export function Offer() {
             <span className="accent">Locked at the founding rate for 5 years.</span>
           </h2>
         </Reveal>
-        <Reveal delay={180}>
+        <Reveal delay={150}>
+          <p className="offer__roi-wrap">
+            About <strong>{DEFAULT_PCT_OF_UPSIDE}%</strong> of the{" "}
+            <strong>{money(DEFAULT_YEAR1)}</strong> a typical HVAC contractor adds in Year 1.{" "}
+            <Link href="/roi" className="offer__roi-link">
+              Run your numbers →
+            </Link>
+          </p>
+        </Reveal>
+        <Reveal delay={210}>
           <p className="offer__strapline">
             Founding rate for the first 25 customers. Price goes up after the cohort closes.
           </p>
