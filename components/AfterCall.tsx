@@ -36,16 +36,15 @@ export default function AfterCall() {
         </h1>
 
         <p className="thanks__sub" style={r(0.18)}>
-          Thanks for spending the time with us today. No rush on anything from here. Sit
-          with it, and decide what makes sense for your shop.
+          Thanks for spending the time with us today. We don&apos;t take it for granted.
         </p>
 
         <div className="thanks__divider" style={r(0.28)} />
 
         <p className="thanks__note" style={r(0.34)}>
           Think of something after we hung up? Email Nicholas at{" "}
-          <a href="mailto:nicholas@getconnectors.ai">nicholas@getconnectors.ai</a>. It comes
-          straight to him, and a real person answers. Naturally.
+          <a href="mailto:nicholas@getconnectors.ai">nicholas@getconnectors.ai</a>. It goes
+          straight to him.
         </p>
 
         <p className="thanks__signoff" style={r(0.46)}>
