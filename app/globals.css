@@ -2103,6 +2103,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0;
 }
 
+.thanks__note a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s var(--ease);
+}
+
+.thanks__note a:hover {
+  color: #fff;
+}
+
 .thanks__signoff {
   margin-top: 64px;
   font-size: 14px;
