@@ -10,17 +10,15 @@ import { TickingValue } from "./Ticking";
 import { trackEvent, newEventId } from "@/lib/analytics";
 
 function CohortRow({ result }: { result: CalcResult }) {
-  const annualCost = 1997 * 12;
-  const pctOfUpside = Math.max(1, Math.round((annualCost / result.year1) * 100));
   return (
     <div
       className="rc-cohort-row"
-      aria-label={`Connectors costs $1,997 per month — about ${pctOfUpside} percent of the ${money(result.year1)} Year 1 added revenue you just calculated. Founding cohort, first 25 customers.`}
+      aria-label={`Connectors costs a tiny fraction of the ${money(result.year1)} Year 1 added revenue you just calculated. Founding cohort, first 25 customers.`}
     >
       <span className="rc-cohort-row__label">Your cost to recover it</span>
-      <span className="rc-cohort-row__value">Connectors costs $1,997/month.</span>
+      <span className="rc-cohort-row__value">Connectors costs a tiny fraction of that.</span>
       <span className="rc-cohort-row__lede">
-        About {pctOfUpside}% of the {money(result.year1)} Year 1 added revenue you just calculated above.
+        A tiny fraction of the {money(result.year1)} Year 1 added revenue you just calculated above.
       </span>
       <span className="rc-cohort-row__note">Founding cohort · first 25 only · price goes up after</span>
     </div>

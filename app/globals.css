@@ -2094,6 +2094,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 540px;
 }
 
+/* After-the-call (/good-talk) — page-specific text */
+.thanks__note {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 560px;
+  margin: 0;
+}
+
+.thanks__signoff {
+  margin-top: 64px;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: -0.005em;
+  color: rgba(255, 255, 255, 0.38);
+  max-width: 560px;
+}
+
 .thanks__footer {
   position: relative;
   padding: 32px 48px;

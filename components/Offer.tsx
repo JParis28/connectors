@@ -11,7 +11,7 @@ export function Offer() {
         </Reveal>
         <Reveal delay={100}>
           <h2 className="offer__title">
-            $1,997 a month.{" "}
+            A tiny fraction of that.{" "}
             <span className="accent">Locked at the founding rate for 5 years.</span>
           </h2>
         </Reveal>
